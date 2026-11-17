@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12/4–12/8 逆時針跑車環島路書｜婚禮・山海拍車・栗松溫泉・日出縮時</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Inter"', '"Noto Sans TC"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#0B0E14',
+            carbon: '#131822',
+            slatecard: '#1A2130',
+            champagne: '#E5C17B',
+            cobalt: '#38BDF8',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #0B0E14;
+      color: #F1F5F9;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* 隱藏橫向捲軸但保留滑動功能 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .glass-panel {
+      background: rgba(26, 33, 48, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gold-gradient-border {
+      position: relative;
+    }
+    .gold-gradient-border::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(229, 193, 123, 0.5), rgba(56, 189, 248, 0.2), rgba(255, 255, 255, 0.05));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-champagne selection:text-obsidian pb-20">
+
+  <!-- 頂部 Hero 橫幅 -->
+  <header class="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-[#131A26] to-[#0B0E14] pt-8 pb-6 px-4 sm:px-6 lg:px-8">
+    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-champagne/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-12 -left-24 w-72 h-72 rounded-full bg-cobalt/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-champagne/15 text-champagne border border-champagne/30">
+          🏎️ 逆時針跑車環島路書
+        </span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10">
+          12/4 (週五) – 12/8 (週二) · 五天四夜
+        </span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          低底盤友善路況檢核
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
+        山海巡航・唯愛婚禮・栗松秘境・太平洋日出縮時
+      </h1>
+      <p class="mt-2 text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed">
+        專為低底盤跑車量身打造的環島實戰手冊：全程篩選平整雙向柏油與寬闊平面停車場，精準對齊 12/5 彰化婚禮、高雄港灣夜拍、南迴順光海岸、栗松野溪溫泉接駁策略與七星潭日出縮時機位。
+      </p>
+
+      <!-- 快速路線總覽條 -->
+      <div class="mt-5 grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+        <button onclick="switchTab('day1')" class="text-left p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition">
+          <div class="text-[11px] font-bold text-champagne">DAY 1 · 12/4 (五)</div>
+          <div class="text-xs font-semibold text-white mt-0.5 truncate">南港 ➔ 西濱 ➔ 彰化</div>
+        </button>
+        <button onclick="switchTab('day2')" class="text-left p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition">
+          <div class="text-[11px] font-bold text-champagne">DAY 2 · 12/5 (六)</div>
+          <div class="text-xs font-semibold text-white mt-0.5 truncate">唯愛婚禮 ➔ 高雄港灣</div>
+        </button>
+        <button onclick="switchTab('day3')" class="text-left p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition">
+          <div class="text-[11px] font-bold text-champagne">DAY 3 · 12/6 (日)</div>
+          <div class="text-xs font-semibold text-white mt-0.5 truncate">高雄 ➔ 南迴 ➔ 池上</div>
+        </button>
+        <button onclick="switchTab('day4')" class="text-left p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition">
+          <div class="text-[11px] font-bold text-champagne">DAY 4 · 12/7 (一)</div>
+          <div class="text-xs font-semibold text-white mt-0.5 truncate">栗松溫泉 ➔ 牛山 ➔ 花蓮</div>
+        </button>
+        <button onclick="switchTab('day5')" class="col-span-2 sm:col-span-1 text-left p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition">
+          <div class="text-[11px] font-bold text-champagne">DAY 5 · 12/8 (二)</div>
+          <div class="text-xs font-semibold text-white mt-0.5 truncate">七星潭日出 ➔ 不厭亭返北</div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 置頂黏性分頁導覽列 -->
+  <nav class="sticky top-0 z-40 bg-[#0B0E14]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="tab-bar" class="flex items-center gap-1.5 sm:gap-2 py-2.5 overflow-x-auto no-scrollbar">
+        <button data-tab="day1" onclick="switchTab('day1')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">
+          Day 1 (12/4 五)
+        </button>
+        <button data-tab="day2" onclick="switchTab('day2')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">
+          Day 2 (12/5 六)
+        </button>
+        <button data-tab="day3" onclick="switchTab('day3')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">
+          Day 3 (12/6 日)
+        </button>
+        <button data-tab="day4" onclick="switchTab('day4')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">
+          Day 4 (12/7 一)
+        </button>
+        <button data-tab="day5" onclick="switchTab('day5')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">
+          Day 5 (12/8 二)
+        </button>
+        <button data-tab="checklist" onclick="switchTab('checklist')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ml-auto">
+          🧰 行前裝備與總覽
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主內容渲染區 -->
+  <main id="app-content" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6"></main>
+
+  <!-- 底部浮動提示 -->
+  <footer class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 pt-6 border-t border-white/10 text-center text-xs text-slate-500">
+    <p>12/4 – 12/8 逆時針低底盤跑車環島專屬路書 · 點擊各站按鈕可直接開啟 Google Maps 導航</p>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // 完整五日行程資料庫（嚴格對應使用者確認的所有細節與地標）
+    // =========================================================================
+    const itineraryData = {
+      day1: {
+        dayLabel: "DAY 1 · 12/4（週五）",
+        title: "南港出發 ➔ 西濱海線風車 ➔ 139縣道綠色隧道 ➔ 彰化市區",
+        subtitle: "週五平日車流順暢，趁中午大太陽順光拍攝苗栗海線風車大片，下午享受 139 縣道山脊林蔭跑車巡航與八卦山夕陽。",
+        stats: [
+          { label: "預估里程", value: "約 195 km" },
+          { label: "純車程時間", value: "約 3 小時 10 分" },
+          { label: "跑車路況評級", value: "★★★★★ 全程平整柏油" },
+          { label: "當晚住宿區", value: "彰化市區（平面/緩坡車位）" }
+        ],
+        alertBanner: {
+          type: "info",
+          title: "Day 1 駕駛策略重點",
+          text: "早上 10:00 從南港出發走國道三號接台61線西濱快速道路，11:30–12:30 剛好是苗栗海岸線海面最藍、光線最通透的正順光時段。"
+        },
+        timeline: [
+          {
+            time: "10:00",
+            title: "南港出發南下",
+            badge: "出發啟程",
+            badgeColor: "bg-slate-700 text-slate-200",
+            locationQuery: "台北南港",
+            description: "從南港上國道三號一路南下，於西濱交流道切入台61線西濱快速道路，享受筆直高架海景巡航。",
+            photoTip: "出發前確認胎壓與行車記錄器記憶卡空間，攜帶一條超細纖維擦車布應對海風鹽分。",
+            chassisTip: "國道三號與台61線高架路段路面極為平整，注意測速照相速限即可。"
+          },
+          {
+            time: "11:30",
+            title: "苗栗後龍好望角（第一停車場）＆ 通霄日落大道",
+            badge: "拍車聖地",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "後龍好望角風景區 第一停車場",
+            secondaryQuery: "通霄日落大道",
+            secondaryLabel: "導航：通霄日落大道",
+            description: "中午順光時段抵達苗栗海岸雙地標！先在後龍好望角居高臨下拍白色巨型風車群與台灣海峽，再沿台61線南下至通霄新埔聯絡道拍攝筆直延伸進大海的日落大道。",
+            photoTip: "好望角第一停車場腹地極大，低角度仰拍可將跑車車頭、巨型風車與藍天白雲同時收進鏡頭；通霄日落大道聯絡道旁設有平坦觀景區與停靠空間。",
+            chassisTip: "兩處聯絡道與停車場皆為全平面柏油鋪面，完全無陡坡或碎石，低底盤跑車可放心進出。"
+          },
+          {
+            time: "12:45",
+            title: "苗栗後龍午餐：阿水飯店",
+            badge: "必吃美食",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "苗栗後龍阿水飯店",
+            description: "苗栗海線超人氣現流海鮮名店，海鮮新鮮、出菜速度快，週五平日中午用餐品質極佳。",
+            photoTip: "餐廳旁備有專屬平面停車場，用餐時愛車就在視線可及範圍內。",
+            chassisTip: "全平面戶外停車場，車格寬敞好停。"
+          },
+          {
+            time: "14:30",
+            title: "彰化 139 縣道（大彰路綠色隧道）➔ 微熱山丘三合院",
+            badge: "操駕體驗",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "南投微熱山丘三合院",
+            secondaryQuery: "彰化139縣道大彰路",
+            secondaryLabel: "導航：139縣道大彰路",
+            description: "下午切入八卦山脈稜線上的 139 縣道（大彰路一段至四段），兩旁高聳小葉欖仁形成筆直綠色隧道，彎道流暢好開；順遊南投端微熱山丘三合院免費品嚐現烤土鳳梨酥與熱烏龍茶。",
+            photoTip: "139 縣道林蔭光影灑落在車身漆面上極具速度感；微熱山丘周邊設有平坦戶外停車場。",
+            chassisTip: "139 縣道為雙向平整柏油山路，請留意沿線單車騎士與部分路段速限（40-50 km/h）。"
+          },
+          {
+            time: "16:30",
+            title: "八卦山大佛風景區（九龍池觀景台）看夕陽",
+            badge: "黃昏大景",
+            badgeColor: "bg-orange-500/20 text-orange-300 border border-orange-500/40",
+            locationQuery: "八卦山大佛風景區九龍池觀景台",
+            description: "順著 139 縣道下山即達八卦山制高點，在九龍池觀景台俯瞰整個彰化平原與遠方台灣海峽的日落晚霞。",
+            photoTip: "16:30–17:10 為 12 月初夕陽黃金時刻，可在觀景台捕捉金色夕陽與城市天際線。",
+            chassisTip: "上山道路為雙向寬闊柏油路，山上停車場腹地平坦寬廣。"
+          },
+          {
+            time: "17:30",
+            title: "彰化市區晚餐：魚市場爌肉飯 ＆ 大元鹹麻糬",
+            badge: "排隊名店",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "彰化魚市場爌肉飯",
+            secondaryQuery: "彰化大元鹹麻糬",
+            secondaryLabel: "導航：大元鹹麻糬",
+            description: "直奔 16:30 開賣的彰化傳奇晚場「魚市場爌肉飯」，品嚐肥瘦相間、入口即化的頂級爌肉；順路至城隍廟旁購買「大元鹹麻糬」當車上點心。",
+            photoTip: "週五傍晚 17:30 抵達比週末好排許多，建議先吃飯再買伴手禮。",
+            chassisTip: "大元鹹麻糬位於城隍廟窄巷內，請務必將愛車停在民生路或外圍大馬路平面停車場，步行 2 分鐘進入購買，切勿將跑車開進巷弄。"
+          },
+          {
+            time: "19:30",
+            title: "入住彰化市區飯店",
+            badge: "住宿休憩",
+            badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
+            locationQuery: "彰化市區飯店",
+            description: "辦理入住並將愛車停入安全車位，距離隔天唯愛庭園婚宴會館僅約 15–20 分鐘車程，養精蓄銳準備參加週六喜宴。",
+            photoTip: "晚上可簡單擦拭車身灰塵，讓愛車明天以最亮麗姿態出席婚禮。",
+            chassisTip: "訂房時優先確認為「戶外平面車位」或「緩坡寬敞地下室」，避免機械車位。"
+          }
+        ],
+        nearbyExtensions: [
+          {
+            name: "LeeLi's 餐廳（鹿港）",
+            category: "IG 質感餐廳",
+            desc: "鹿港超人氣工業風與植栽設計感餐廳，結合在地食材的創意西式料理與甜點，距離台61線鹿港交流道僅 5 分鐘。",
+            query: "鹿港 LeeLi's"
+          },
+          {
+            name: "八棧食堂（彰化市）",
+            category: "深夜美食備案",
+            desc: "若魚市場爌肉飯售完或較晚用餐，八棧食堂營業至午夜 12 點，高評價日式燒肉丼飯與鍋物，環境明亮有質感。",
+            query: "彰化八棧食堂"
+          },
+          {
+            name: "瘦子咖啡 Skinny Cafe",
+            category: "文青咖啡廳",
+            desc: "彰化市區 IG 評價極高的質感手沖咖啡與手作甜點店，適合下午提早進市區時歇腳。",
+            query: "彰化瘦子咖啡"
+          },
+          {
+            name: "尋鹿咖啡（彰化店）",
+            category: "下午茶輕食",
+            desc: "主打可愛小鹿拉花與厚鬆餅早午餐，空間溫馨舒適，周邊停車方便。",
+            query: "彰化尋鹿咖啡"
+          }
+        ]
+      },
+
+      day2: {
+        dayLabel: "DAY 2 · 12/5（週六）",
+        title: "【婚禮日】彰化唯愛庭園 ➔ 南下高雄港灣黃金夕陽與夜拍",
+        subtitle: "上午從容出席唯愛庭園「仙杜瑞拉廳」11:30 婚宴，午後沿國道一號一路南下高雄，傍晚捕捉亞洲新灣區日落與未來感蜂巢建築夜拍。",
+        stats: [
+          { label: "預估里程", value: "約 190 km" },
+          { label: "純車程時間", value: "約 2 小時 30 分" },
+          { label: "跑車路況評級", value: "★★★★★ 高速＋港區寬闊大道" },
+          { label: "當晚住宿區", value: "高雄市區（鹽埕/前金/左營）" }
+        ],
+        alertBanner: {
+          type: "gold",
+          title: "今日核心任務：11:30 準時參加婚禮",
+          text: "建議 10:45 提前抵達唯愛庭園，不僅能停到獨立寬闊車位減少鄰車開門碰撞風險，還能在開席前趁白天順光幫愛車與歐式白色莊園合影！"
+        },
+        timeline: [
+          {
+            time: "10:45",
+            title: "抵達彰化「唯愛庭園 Vena Manor（仙杜瑞拉廳）」",
+            badge: "核心任務",
+            badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
+            locationQuery: "彰化唯愛庭園 Vena Manor",
+            description: "位於彰化市大埔路的歐式莊園婚宴會館，提前 45 分鐘抵達從容停車並拍照留念。",
+            photoTip: "園區內白色歐式教堂與大草皮建築極具異國氛圍，開席前光線柔和，若現場停車動線許可非常適合幫愛車留影。",
+            chassisTip: "園區入口與停車場均為平整柏油路面，無陡峭門檻，建議選擇邊角車位停放。"
+          },
+          {
+            time: "11:30",
+            title: "參加婚禮喜宴（仙杜瑞拉廳）",
+            badge: "喜宴時刻",
+            badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
+            locationQuery: "彰化唯愛庭園 Vena Manor",
+            description: "享受喜宴美食與祝福新人，預計 14:30 圓滿結束後啟程南下。",
+            photoTip: "喜宴期間留意水分補充，為下午 2.5 小時的高速巡航保持最佳精神。",
+            chassisTip: "車輛安全停放於園區停車場內。"
+          },
+          {
+            time: "14:30",
+            title: "彰化出發 ➔ 國道一號直奔高雄",
+            badge: "高速巡航",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "高雄流行音樂中心",
+            description: "從彰化上國道一號一路向南，全線高速路面平整好開，約 17:00 抵達高雄港灣區域，剛好無縫銜接 17:15 左右的港邊日落。",
+            photoTip: "可於新營或仁德服務區短暫休息洗手間，確保 17:00 前抵達高雄港區。",
+            chassisTip: "全線國道平整高速，抵達高雄市區後走五福路或公園二路進入港區道路寬闊。"
+          },
+          {
+            time: "17:00",
+            title: "高雄港灣黃金夕陽 ＆ 流行音樂中心蜂巢建築夜拍",
+            badge: "拍車聖地",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "高雄流行音樂中心海風廣場",
+            secondaryQuery: "棧貳庫 KW2",
+            secondaryLabel: "導航：棧貳庫 KW2",
+            description: "傍晚時分先在棧貳庫 KW2 与駁二蓬萊港區捕捉金黃色晚霞映照海面與車身；入夜點燈後轉往高雄流行音樂中心海風廣場，拍攝流光溢彩的六角形蜂巢建築與愛河灣水面倒影。",
+            photoTip: "開啟愛車日行燈與尾燈，利用高流中心冷暖交織的建築燈光在車身鈑金上拉出絕美光條反光，是南部超跑車友最經典的夜拍聖地！",
+            chassisTip: "真愛路與公園二路交界周邊設有大片「全平面露天停車場」，無地下室斜坡問題，低底盤跑車可安心停放。"
+          },
+          {
+            time: "19:00",
+            title: "高雄晚餐：永心浮島 YONGXIN FLOAT（港景餐酒館）",
+            badge: "IG 熱門美食",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "永心浮島 YONGXIN FLOAT",
+            secondaryQuery: "高雄老二腿庫飯",
+            secondaryLabel: "備案：老二腿庫飯",
+            description: "位於駁二大義倉庫 C6 棟的超人氣台式時髦海鮮餐酒館，落地窗直接面向大港橋與港灣夜景，裝潢復古摩登（週六建議提前訂位）；若想吃道地台味宵夜，也可選興中二路「老二腿庫飯」。",
+            photoTip: "餐廳就在大港橋旁，用餐前後可順道散步欣賞大港橋夜間燈光秀。",
+            chassisTip: "車輛可續停於駁二周邊全平面停車場，步行 3 分鐘即達餐廳。"
+          },
+          {
+            time: "21:30",
+            title: "入住高雄市區飯店",
+            badge: "住宿休憩",
+            badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
+            locationQuery: "高雄鹽埕區飯店",
+            description: "建議入住鹽埕區（駁二周邊）、前金區或左營高鐵特區，隔天一早直接上國道十號接國道三號往南迴公路出發最順路。",
+            photoTip: "為手機、相機與運動相機充滿電，明天上午將迎來整趟環島最美的南迴順光海岸！",
+            chassisTip: "優先選擇標註「平面停車場」的星級飯店或汽車旅館。"
+          }
+        ],
+        nearbyExtensions: [
+          {
+            name: "大港橋（駁二大義倉庫群）",
+            category: "地標散步",
+            desc: "純白流線型水平旋轉橋，夜間打燈後極具港都浪漫氛圍（注意橋面與倉庫內為行人徒步區，愛車請停外圍合法平面車格）。",
+            query: "高雄大港橋"
+          },
+          {
+            name: "新濱・駅前（鼓山區）",
+            category: "百年銀行咖啡廳",
+            desc: "由百年舊三和銀行改建的復古銀行風咖啡餐酒館，挑高空間與金庫設計極具特色，距離棧貳庫僅 3 分鐘。",
+            query: "高雄新濱駅前"
+          },
+          {
+            name: "鹽埕區老字號美食圈（鴨肉珍 / 港園牛肉麵 / 樺達奶茶）",
+            category: "在地經典小吃",
+            desc: "全數集中在駁二周邊 5 分鐘車程內，若不想吃餐酒館，這三家在地傳奇老店絕對不踩雷。",
+            query: "高雄鹽埕鴨肉珍"
+          },
+          {
+            name: "瑞豐夜市（左營區）",
+            category: "週六夜市體驗",
+            desc: "週六有營業的高雄指標夜市，若住宿選在左營高鐵周邊，晚上可順道逛夜市感受南台灣熱情。",
+            query: "高雄瑞豐夜市"
+          }
+        ]
+      },
+
+      day3: {
+        dayLabel: "DAY 3 · 12/6（週日）",
+        title: "高雄 ➔ 南迴正順光太平洋拍車 ➔ 台東池上合法柏油秘境",
+        subtitle: "上午行經南迴公路時太陽位於東方海面，太平洋呈現最深邃寶石藍的「正順光」；下午進駐池上，精準導航至無管制、全柏油的鄉間大道拍車。",
+        stats: [
+          { label: "預估里程", value: "約 235 km" },
+          { label: "純車程時間", value: "約 3 小時 50 分" },
+          { label: "跑車路況評級", value: "★★★★★ 南迴拓寬平整＋精選全柏油地標" },
+          { label: "當晚住宿區", value: "台東池上或關山（距南橫入口15分）" }
+        ],
+        alertBanner: {
+          type: "warning",
+          title: "池上拍車防雷必讀：嚴禁闖入管制區與 197 縣道南段！",
+          text: "伯朗大道內圈為全年車輛管制區，且 197 縣道南段（23K–37K）為碎石泥土越野路！請務必使用下方為您設定好的 4 個「全柏油合法地標」導航。"
+        },
+        timeline: [
+          {
+            time: "09:00",
+            title: "高雄市區出發 ➔ 國三南下接台9線南迴公路",
+            badge: "出發啟程",
+            badgeColor: "bg-slate-700 text-slate-200",
+            locationQuery: "台東多良觀光車站",
+            description: "從高雄上國道十號接國道三號一路南下至林邊交流道，接台1線、台9線草埔森永隧道進入台東海岸。",
+            photoTip: "草埔森永隧道前後為雙向高架拓寬路段，行車視野極為開闊。",
+            chassisTip: "南迴改全線為超跑級平整柏油路面，隧道內設有區間測速，請依速限行駛。"
+          },
+          {
+            time: "10:45",
+            title: "南迴海岸正順光連拍：多良車站 ➔ 金崙大橋 ➔ 華源海灣",
+            badge: "拍車聖地",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "多良觀光車站",
+            secondaryQuery: "華源海灣 HuaYuan Bay",
+            secondaryLabel: "導航：華源海灣",
+            description: "上午太陽在東側太平洋上方，海水呈現極致寶石藍！依序停靠「多良車站下方台9線海側寬闊路肩」、行駛全台最美海上高架「金崙大橋」，以及緊鄰沙灘的「華源海灣」觀景停車區。",
+            photoTip: "金崙大橋橋面禁止臨停，建議上橋前架好車內運動相機錄製動態第一視角大片；多良車站下方與華源海灣路旁皆可安全停靠拍出跑車與太平洋海平面合影。",
+            chassisTip: "華源海灣台9線旁設有全平面柏油停車區，進出無高低落差，低底盤完全友善。"
+          },
+          {
+            time: "12:30",
+            title: "午餐：太麻里「鼎倫牛肉麵」或 台東市區名店",
+            badge: "必吃美食",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "太麻里鼎倫牛肉麵",
+            secondaryQuery: "台東榕樹下米苔目",
+            secondaryLabel: "備案：榕樹下米苔目",
+            description: "南迴出口第一站超人氣「鼎倫牛肉麵」，大塊軟嫩牛肉配濃郁湯頭；若想進台東市區，也可選擇「榕樹下米苔目」或「藍蜻蜓速食」。",
+            photoTip: "太麻里路段馬路寬敞好停車，吃完午餐即可直接接台9線縱谷北上。",
+            chassisTip: "太麻里街區道路平坦寬闊，路邊停放輕鬆。"
+          },
+          {
+            time: "15:30",
+            title: "池上全柏油合法秘境拍車（四大精準地標）",
+            badge: "精準地標",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "池上萬安磚窯廠",
+            secondaryQuery: "大坡池風景區停車場",
+            secondaryLabel: "導航：大坡池停車場",
+            description: "避開車輛管制區，直接導航以下 4 個全柏油合法點拍出中央山脈雲瀑與田園大道大片：①「池上萬安磚窯廠」（197縣道2.5K平整段）、②「池上伯朗大道入口 / 保安宮（池上萬安）」（牌坊外圍廣場）、③「大坡池風景區停車場」（池富道路23號旁）、④「池上鄉農會觀光工廠（金色豐收館）」。",
+            photoTip: "15:30–16:45 夕陽斜射中央山脈雲瀑，在萬安磚窯廠外圍與大坡池環湖平坦道路都能拍出無人干擾的電影感跑車側身照。",
+            chassisTip: "⚠️ 拍完「池上萬安磚窯廠」後請原路折返接回台9線，切勿繼續沿 197 縣道往南開（23K 後為碎石越野路）！"
+          },
+          {
+            time: "16:30",
+            title: "池上在地點心：大池豆皮店 ＆ 福原豆腐店",
+            badge: "在地美味",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "池上大池豆皮店",
+            secondaryQuery: "池上福原豆腐店",
+            secondaryLabel: "導航：福原豆腐店",
+            description: "下午茶時段品嚐現煎金黃酥脆的柴燒豆包與外酥內嫩香豆腐，搭配濃醇無糖豆漿。",
+            photoTip: "建議早點抵達，豆皮賣完即打烊。",
+            chassisTip: "大池豆皮店位於田間小巷內，請務必將跑車停在外圍大馬路邊白線內，步行 1 分鐘進入。"
+          },
+          {
+            time: "18:30",
+            title: "池上晚餐 ➔ 入住池上/關山飯店（整裝迎接栗松溫泉）",
+            badge: "住宿與整裝",
+            badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
+            locationQuery: "悟饕池上飯包文化故事館",
+            secondaryQuery: "池上日暉國際渡假村",
+            secondaryLabel: "住宿參考：日暉渡假村",
+            description: "晚餐可選創意日式炸春捲「好煎炸」或擁有超大平面停車場的「悟饕池上飯包文化故事館」。晚間入住池上或關山飯店（距離隔天南橫入口僅 10–15 分鐘），早點休息並整理野溪溫泉裝備。",
+            photoTip: "睡前確認好明天 06:30 與栗松溫泉 4x4 接駁車的會合時間與地點。",
+            chassisTip: "日暉國際渡假村或池上鎮上平面車位民宿皆對跑車非常友善，愛車明天可安全留停於飯店內。"
+          }
+        ],
+        nearbyExtensions: [
+          {
+            name: "池上好煎炸（創意日式炸春捲）",
+            category: "IG 熱門晚餐",
+            desc: "將池上米與在地食材包進酥脆炸春捲的文青小店，在池上 IG 圈評價極高。",
+            query: "池上好煎炸"
+          },
+          {
+            name: "關山米國學校（台9線旁）",
+            category: "順遊休息站",
+            desc: "位於台9線關山段大馬路旁，擁有超大平面停車場與彩繪米倉，適合縱谷北上途中小憩。",
+            query: "關山米國學校"
+          },
+          {
+            name: "鹿野高台（全柏油山路）",
+            category: "俯瞰縱谷大景",
+            desc: "從台9線鹿野轉上高台全線為寬闊雙向柏油路，大草皮與山頂停車場視野極佳，能俯瞰整個花東縱谷棋盤稻田。",
+            query: "台東鹿野高台"
+          },
+          {
+            name: "池上吉本肉圓",
+            category: "在地老店",
+            desc: "池上街上深受在地人喜愛的肉圓與四神湯老店，就在中山路大馬路旁。",
+            query: "池上吉本肉圓"
+          }
+        ]
+      },
+
+      day4: {
+        dayLabel: "DAY 4 · 12/7（週一）",
+        title: "南橫秘境「栗松溫泉」➔ 玉長公路 ➔ 石梯坪 ➔ 牛山呼庭 ➔ 花蓮",
+        subtitle: "週一平日避開週末人潮，上午專心攻克台灣最美野溪溫泉；下午走玉長公路切入台11線海線北上，收集石梯坪與牛山呼庭海岸風光。",
+        stats: [
+          { label: "預估里程", value: "約 165 km（不含接駁）" },
+          { label: "純車程時間", value: "約 3 小時 10 分" },
+          { label: "跑車路況評級", value: "★★★★☆ 需注意栗松與牛山聯絡道策略" },
+          { label: "當晚住宿區", value: "花蓮市區（平面/緩坡車位）" }
+        ],
+        alertBanner: {
+          type: "danger",
+          title: "今日兩大低底盤跑車防護鐵律！",
+          text: "① 栗松溫泉最後一段產業道路極陡極窄，【絕對不要開跑車下去】，請預約當地 4x4 接駁車從飯店或南橫主線接駁！\n② 牛山呼庭聯外小路為陡峭窄髮夾彎，建議停上方台11線安全空地步行 10–15 分鐘下切，或極低速大角度斜切通過。"
+        },
+        timeline: [
+          {
+            time: "06:30",
+            title: "池上/關山出發 ➔ 搭乘 4x4 接駁車前往南橫「栗松溫泉」",
+            badge: "跑車防護",
+            badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
+            locationQuery: "台東栗松溫泉",
+            description: "強烈建議預約池上／關山／利稻當地的野溪溫泉 4x4 得利卡接駁車，直接從飯店門口接送（愛車安全留停於飯店平面停車場），省去開山路風險並保留體力。",
+            photoTip: "若想自己開一段台20線南橫主線（初來至摩天為平整雙向柏油），也可與接駁車約在利稻或摩天主線平坦寬闊處換乘。",
+            chassisTip: "摩天往登山口的產業道路坡度極陡且高低落差大，低底盤跑車進去必磨前下巴與底盤，務必交給接駁車。"
+          },
+          {
+            time: "07:45",
+            title: "栗松溫泉秘境野溪溫泉朝聖（含下切、泡湯與回程攀升）",
+            badge: "野溪秘境",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "台東栗松溫泉",
+            description: "單程下切山徑約 40–60 分鐘（後段需拉繩攀爬大石壁與涉水渡溪），抵達被譽為台灣最美的翡翠綠礦物結晶岩壁野溪溫泉！12 月初微涼天氣泡在熱呼呼的溪谷溫泉裡極度享受，約 11:00 起登返回登山口。",
+            photoTip: "週一早上人潮稀少，極易拍到無人的翡翠綠岩壁與溫泉蒸汽大片！記得使用防水袋保護手機／相機。",
+            chassisTip: "下切與回程均為徒步拉繩攀爬，務必穿著防滑溯溪鞋並戴工作手套。"
+          },
+          {
+            time: "13:15",
+            title: "返回池上/關山飯店取車、梳洗並享用午餐",
+            badge: "整裝補給",
+            badgeColor: "bg-slate-700 text-slate-200",
+            locationQuery: "池上鄉",
+            description: "搭接駁車回到飯店沖洗換上乾爽衣物，簡單享用午餐後，正式開啟下午的太平洋海線北上之旅。",
+            photoTip: "把濕透的溯溪鞋與毛巾放入後車廂防水置物箱，保持車室乾爽。",
+            chassisTip: "愛車在飯店平面停車場滿血待命。"
+          },
+          {
+            time: "14:15",
+            title: "台9線接「台30線玉長公路」➔ 切入台11線海線北上",
+            badge: "山海穿越",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "玉長公路",
+            description: "從玉里轉接台30線玉長公路橫越海岸山脈，穿過玉長隧道瞬間太平洋在眼前展開，隨即左轉台11線一路向北。",
+            photoTip: "玉長公路彎道流暢、視野開闊，是連接縱谷與海岸的絕美山道。",
+            chassisTip: "全線雙向平整柏油山路，路面品質優良。"
+          },
+          {
+            time: "15:15",
+            title: "豐濱「石梯坪」白色單面山拍車",
+            badge: "拍車聖地",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "花蓮石梯坪",
+            description: "抵達台11線最具辨識度的地標「石梯坪」，壯觀的白色單面山與世界級海蝕平台緊鄰海岸停車場。",
+            photoTip: "低角度取景能讓跑車車身線條與白色凝灰岩、太平洋浪花形成強烈視覺對比。",
+            chassisTip: "園區進出道路平緩，設有緊鄰海岸的全平面柏油停車場，對低底盤非常友善。"
+          },
+          {
+            time: "16:15",
+            title: "水璉「牛山呼庭」漂流木藝術與秘境海灘（營業至 18:00）",
+            badge: "海岸秘境",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "花蓮牛山呼庭",
+            description: "沿台11線北上至水璉路段，造訪充滿漂流木裝置藝術、大草皮與月牙海灘的牛山呼庭，喝杯飲料吹海風（門票可折抵消費）。",
+            photoTip: "16:15–17:30 的黃昏柔和光線灑在草皮與漂流木建築上極具文青電影感。",
+            chassisTip: "⚠️ 重要提醒：台11線 26.6K 轉入園區的聯外小路為「陡峭且狹窄的髮夾彎下坡」，會車空間有限！強烈建議先觀察台11線入口旁安全寬闊空地臨停，步行 10–15 分鐘下切；若決定開車下去，務必放慢至極低速並採「大角度斜切」通過每個髮夾彎轉折點。"
+          },
+          {
+            time: "18:15",
+            title: "抵達花蓮市區飯店 ➔ 花蓮晚餐（王記茶舖 / 耕壽司 / 東大門夜市）",
+            badge: "美食與住宿",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "花蓮王記茶舖人文茶堂中山店",
+            secondaryQuery: "花蓮東大門夜市",
+            secondaryLabel: "備案：東大門夜市",
+            description: "入住花蓮市區飯店後，晚餐推薦在地人最愛的「王記茶舖（中山店）」（旁邊有專屬大型平面停車場，餐點水準極高）、高人氣「耕壽司」或規劃整齊寬敞的「東大門夜市」。",
+            photoTip: "睡前確認相機腳架與電池已備妥，明天早上 05:50 準時出發七星潭錄製日出縮時！",
+            chassisTip: "東大門夜市外圍（重慶路／北濱街）與王記茶舖中山店旁皆有大片平面露天停車場。"
+          }
+        ],
+        nearbyExtensions: [
+          {
+            name: "項鍊海岸工作室（石梯坪旁）",
+            category: "海景月牙鞦韆咖啡",
+            desc: "就在石梯坪北側旁，擁有面對太平洋的夢幻月牙形鞦韆與原住民風味海景咖啡，入口平緩好停。",
+            query: "花蓮項鍊海岸工作室"
+          },
+          {
+            name: "大石鼻山休憩區停車場（磯崎海灣）",
+            category: "台11線中繼站",
+            desc: "位於石梯坪與牛山呼庭之間，全平面寬闊柏油停車場緊鄰磯崎沙灘與筆直海岸公路，設有洗手間。",
+            query: "大石鼻山休憩區停車場"
+          },
+          {
+            name: "瑞穗北回歸線標誌公園（縱谷備案）",
+            category: "地標打卡",
+            desc: "若當天午後山區起霧改走台9線縱谷北上，瑞穗北回歸線公園設有超大平面停車場與純白日晷地標。",
+            query: "瑞穗北回歸線標誌公園"
+          },
+          {
+            name: "花蓮觀光糖廠（光復糖廠）",
+            category: "休憩吃冰",
+            desc: "同樣位於台9線縱谷線上的經典休憩點，停車場極大且全平面。",
+            query: "花蓮觀光糖廠"
+          }
+        ]
+      },
+
+      day5: {
+        dayLabel: "DAY 5 · 12/8（週二）",
+        title: "七星潭泊區日出縮時 ➔ 蘇花改 ➔ 宜蘭午餐 ➔ 不厭亭壓軸返北",
+        subtitle: "清晨 06:00 在七星潭泊區第一排錄製「跑車日行燈＋太平洋日出」縮時大片；回飯店補眠早餐後北上，登上 102 縣道不厭亭拍下環島最終章。",
+        stats: [
+          { label: "預估里程", value: "約 215 km" },
+          { label: "純車程時間", value: "約 3 小時 30 分" },
+          { label: "跑車路況評級", value: "★★★★★ 全線平整柏油＋第一排海景" },
+          { label: "預計返抵時間", value: "16:30 平安返抵台北南港" }
+        ],
+        alertBanner: {
+          type: "gold",
+          title: "12/8 七星潭日出縮時黃金時間表（日出約 06:28）",
+          text: "05:50 飯店出發 ➔ 06:00 停妥於「七星潭泊區旁停車場」最靠海側邊緣 ➔ 06:05 藍調時刻開啟跑車日行燈並啟動縮時（間隔 2–3 秒）➔ 07:05 收工回飯店享用早餐！"
+        },
+        timeline: [
+          {
+            time: "06:00",
+            title: "七星潭泊區旁停車場：太平洋海上日出 ＆ 跑車縮時攝影",
+            badge: "日出縮時大片",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "七星潭泊區旁停車場",
+            description: "距離花蓮市區僅 10 分鐘車程！將愛車停在停車場「最靠海側邊緣的平坦柏油位置」，車頭朝東北方（太平洋與遠方清水斷崖山壁），腳架架在車側後方 3–5 公尺處錄製 30 分鐘完整日出縮時。",
+            photoTip: "🎬 縮時參數：間隔設定 2–3 秒拍一張、鎖定手動對焦（MF）與白平衡；06:05–06:25 藍調時刻開啟愛車日行燈，看著太陽從海平面升起將車身烤漆染成金黃色！",
+            chassisTip: "週二清晨人車極少，停車場為全平面寬闊柏油鋪面，無任何高低落差，低底盤跑車可輕鬆貼近海側邊緣取景。"
+          },
+          {
+            time: "07:15",
+            title: "返回花蓮飯店享用早餐、小睡補眠與整理退房",
+            badge: "悠閒休憩",
+            badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
+            locationQuery: "花蓮市區",
+            description: "拍完日出大片後時間還非常早，從容回飯店吃頓豐盛早餐、補眠休息，09:30 再退房北上。",
+            photoTip: "趁早餐時間將剛拍好的日出縮時素材匯入手機預覽，成就感滿分！",
+            chassisTip: "退房前再次確認隨身物品與器材均已上車。"
+          },
+          {
+            time: "09:30",
+            title: "正式北上啟程 ➔ 清水斷崖（匯德休憩區）順光海景",
+            badge: "山海巡航",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "匯德休憩區",
+            description: "沿台9線北上進入蘇花路段，上午順光時段的清水斷崖海水呈現最清澈的漸層牛奶藍與寶石藍，於匯德休憩區短暫停靠欣賞斷崖美景後，經蘇花改一路北上宜蘭。",
+            photoTip: "匯德休憩區停車場靠近海側護欄可直接俯瞰太平洋斷崖。",
+            chassisTip: "匯德休憩區與蘇花改全線皆為平整寬闊柏油路，留意蘇花改隧道內區間測速。"
+          },
+          {
+            time: "11:45",
+            title: "宜蘭午餐與中繼休憩（礁溪 / 頭城）",
+            badge: "必吃美食",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "礁溪龍潭湖畔悠活園區",
+            secondaryQuery: "頭城滿山望海",
+            secondaryLabel: "海景咖啡：滿山望海",
+            description: "中午抵達宜蘭，可前往擁有超大平面停車場與純白貨櫃建築的「礁溪龍潭湖畔悠活園區」，或品嚐「正常鮮肉小籠湯包」、「樂山溫泉拉麵」，若想看龜山島海景也可預約頭城「滿山望海」（車停烏石港／蘭陽博物館平面停車場）。",
+            photoTip: "龍潭湖畔悠活園區純白建築群與綠地非常乾淨好拍。",
+            chassisTip: "龍潭湖畔悠活園區與烏石港周邊均設有大型戶外平面停車場。"
+          },
+          {
+            time: "13:45",
+            title: "台2線濱海公路北上 ➔ 雙溪切入「102 縣道瑞雙公路」",
+            badge: "經典山道",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "雙溪102縣道",
+            description: "不走無聊的雪隧回台北！改走台2線東北角濱海公路吹海風，至福隆／雙溪轉入北部車友最愛的 102 縣道瑞雙公路一路爬升。",
+            photoTip: "週二平日下午 102 縣道車流極少，彎道流暢視野極佳。",
+            chassisTip: "102 縣道全線為雙向平整柏油山路，無坑洞陡坎。"
+          },
+          {
+            time: "14:45",
+            title: "登上「不厭亭」：12 月滿山芒草與寂寞公路壓軸大片",
+            badge: "環島壓軸大片",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
+            locationQuery: "瑞芳不厭亭",
+            description: "抵達 102 縣道製高點「不厭亭」，筆直的雙向公路沿著山稜線延伸，12 月初滿山銀白色芒草隨風搖曳，在此拍下五天四夜跑車環島的完美封神畢業照！",
+            photoTip: "不厭亭前方直道兩側有寬闊平坦停靠空間，以連綿山巒與芒草公路為背景，低角度拍攝跑車車尾或車頭皆極具氣勢。",
+            chassisTip: "不厭亭周邊路肩為平整柏油鋪面，減速慢行靠邊停妥即可，注意山區陣風與保暖。"
+          },
+          {
+            time: "15:30",
+            title: "下九份接台62線快速道路 ➔ 國道一號平安返回南港",
+            badge: "圓滿返家",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "台北南港",
+            description: "拍完壓軸大片後順著 102 縣道下九份外圍（不進老街塞車），直接銜接台62線萬瑞快速道路轉國道一號，約 16:30 避開下班尖峰車潮平安返抵南港！",
+            photoTip: "五天四夜逆時針跑車環島圓滿達成！",
+            chassisTip: "台62線接國道一號全線高速平整順暢。"
+          }
+        ],
+        nearbyExtensions: [
+          {
+            name: "崇德海灘 / 崇德瑩農場外圍堤防",
+            category: "日出備案機位",
+            desc: "若早上願意早 20 分鐘（05:40）出門往北開，崇德海灘堤防平路可同時拍到太平洋日出與清水斷崖山壁同框。",
+            query: "崇德海灘"
+          },
+          {
+            name: "基隆八斗子潮境公園",
+            category: "海線收尾備案",
+            desc: "若下午想走全海線回台北，可續走台2線至潮境公園（大片臨海平面停車場，拍基隆嶼與跑車），再接台62線返南港。",
+            query: "基隆潮境公園"
+          },
+          {
+            name: "蘭陽博物館 ＆ 烏石港（頭城）",
+            category: "建築拍車點",
+            desc: "單面山幾何玻璃建築極具現代感，周邊平面停車場腹地超大，適合作為宜蘭午餐後的順遊點。",
+            query: "宜蘭蘭陽博物館"
+          },
+          {
+            name: "正常鮮肉小籠湯包（礁溪店）",
+            category: "宜蘭排隊小吃",
+            desc: "皮薄多汁的蔥香小籠湯包，週二平日中午排隊時間短，適合快速享用道地宜蘭味。",
+            query: "正常鮮肉小籠湯包礁溪店"
+          }
+        ]
+      }
+    };
+
+    // =========================================================================
+    // 行前檢查清單資料（跑車專屬＋日出縮時器材＋栗松野溪溫泉裝備）
+    // =========================================================================
+    const checklistCategories = [
+      {
+        id: "car-care",
+        title: "🏎️ 低底盤跑車長途環島檢查與隨車小物",
+        subtitle: "保護前下巴、漆面與確保五天山海巡航零故障",
+        items: [
+          { id: "c1", text: "出發前檢查四輪胎壓、胎紋深度、機油與冷卻水液位" },
+          { id: "c2", text: "檢查雨刷膠條與雨刷水（12月宜蘭與東北角易有細雨）" },
+          { id: "c3", text: "攜帶超細纖維擦車布 2–3 條 ＋ 簡易水蠟 / 細節噴霧（海邊拍車前快速去鹽分灰塵）" },
+          { id: "c4", text: "確認高流量行車記錄器 / 運動相機吸盤支架與記憶卡容量（南迴金崙大橋動態錄影用）" },
+          { id: "c5", text: "車用手機快充線、12V 點菸器充電器與急救隨車打氣機" },
+          { id: "c6", text: "⚠️ 雙重確認所有飯店停車位為「戶外平面」或「緩坡地下室」（避免機械車位）" }
+        ]
+      },
+      {
+        id: "photo-gear",
+        title: "📸 拍車大片 ＆ 七星潭日出縮時攝影器材",
+        subtitle: "Day 5 清晨 06:00 七星潭泊區 30 分鐘日出縮時專用",
+        items: [
+          { id: "p1", text: "穩固三腳架（七星潭海邊清晨微風，腳架需足夠穩重防晃動）" },
+          { id: "p2", text: "相機 / 手機滿電電池 ＋ 行動電源（低溫海邊電池消耗較快）" },
+          { id: "p3", text: "偏光鏡 CPL（消除車窗與烤漆表面多餘反光，讓南迴太平洋海水更湛藍）" },
+          { id: "p4", text: "遙控快門線或手機縮時 App 測試（設定間隔 2–3 秒、鎖定 MF 對焦與白平衡）" },
+          { id: "p5", text: "鏡頭拭鏡紙與吹球（海邊水氣與鹽霧易附著於鏡片）" }
+        ]
+      },
+      {
+        id: "lisong-gear",
+        title: "♨️ Day 4 栗松野溪溫泉 ＆ 婚禮正式服裝",
+        subtitle: "兼顧週六正式喜宴與週一陡峭峽谷攀爬涉水",
+        items: [
+          { id: "l1", text: "【重要】提前預約池上 / 關山 / 利稻「栗松溫泉 4x4 得利卡接駁車」（絕不開跑車進產業道路）" },
+          { id: "l2", text: "防滑溯溪鞋或高抓地力水陸兩用鞋（溪谷石壁濕滑必備）" },
+          { id: "l3", text: "棉質工作手套 / 攀爬手套（下切與回程需拉繩攀爬大石壁）" },
+          { id: "l4", text: "15L–20L 防水袋（裝手機、相機、毛巾、乾衣物與行動糧）" },
+          { id: "l5", text: "泳衣褲、速乾毛巾、保暖防風外套（12月溪谷泡湯起身時溫差大）" },
+          { id: "l6", text: "後車廂大型防水置物箱 / 塑膠袋（收納泡湯後的濕裝備，不弄濕跑車內裝）" },
+          { id: "l7", text: "Day 2（12/5）彰化唯愛庭園婚禮正式服裝與紅包禮金" }
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // 狀態管理與互動渲染邏輯
+    // =========================================================================
+    let currentTab = 'day1';
+    let checkedItems = {};
+
+    // 從 localStorage 載入勾選狀態（若環境允許）
+    try {
+      const saved = localStorage.getItem('roadtrip_checklist_1204');
+      if (saved) checkedItems = JSON.parse(saved);
+    } catch (e) {
+      checkedItems = {};
+    }
+
+    function saveChecklistState() {
+      try {
+        localStorage.setItem('roadtrip_checklist_1204', JSON.stringify(checkedItems));
+      } catch (e) {
+        // 忽略無痕或沙盒限制
+      }
+    }
+
+    function toggleCheckItem(id) {
+      checkedItems[id] = !checkedItems[id];
+      saveChecklistState();
+      renderChecklist();
+    }
+
+    function getMapUrl(query) {
+      return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+    }
+
+    function switchTab(tabId) {
+      currentTab = tabId;
+      updateTabButtons();
+      if (tabId === 'checklist') {
+        renderChecklist();
+      } else {
+        renderDay(tabId);
+      }
+      window.scrollTo({ top: document.querySelector('nav').offsetTop - 5, behavior: 'smooth' });
+    }
+
+    function updateTabButtons() {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-tab') === currentTab;
+        if (isActive) {
+          btn.className = "tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-champagne text-obsidian shadow-lg shadow-champagne/20";
+        } else {
+          btn.className = "tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/10";
+        }
+      });
+    }
+
+    function renderDay(dayKey) {
+      const data = itineraryData[dayKey];
+      const container = document.getElementById('app-content');
+
+      // 警告/提示橫幅樣式
+      let alertStyle = "bg-cobalt/10 border-cobalt/30 text-sky-200";
+      let alertIcon = "💡";
+      if (data.alertBanner.type === "gold") {
+        alertStyle = "bg-champagne/10 border-champagne/30 text-amber-100";
+        alertIcon = "✨";
+      } else if (data.alertBanner.type === "warning") {
+        alertStyle = "bg-amber-500/15 border-amber-500/40 text-amber-100";
+        alertIcon = "⚠️";
+      } else if (data.alertBanner.type === "danger") {
+        alertStyle = "bg-rose-500/15 border-rose-500/40 text-rose-100";
+        alertIcon = "🚨";
+      }
+
+      const statsHtml = data.stats.map(stat => `
+        <div class="p-3.5 rounded-2xl bg-carbon/90 border border-white/10">
+          <div class="text-[11px] font-medium text-slate-400">${stat.label}</div>
+          <div class="text-sm sm:text-base font-bold text-white mt-1">${stat.value}</div>
+        </div>
+      `).join('');
+
+      const timelineHtml = data.timeline.map((item, idx) => `
+        <div class="relative pl-6 sm:pl-8 pb-8 last:pb-0 group">
+          <!-- 時間軸垂直線 -->
+          ${idx !== data.timeline.length - 1 ? '<div class="absolute left-[7px] sm:left-[9px] top-6 bottom-0 w-[2px] bg-gradient-to-b from-champagne/60 via-white/15 to-white/5"></div>' : ''}
+          <!-- 時間軸圓點 -->
+          <div class="absolute left-0 top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-obsidian border-2 border-champagne flex items-center justify-center shadow-md shadow-champagne/20">
+            <div class="w-1.5 h-1.5 rounded-full bg-champagne"></div>
+          </div>
+
+          <div class="glass-panel gold-gradient-border rounded-2xl p-4 sm:p-6 transition hover:bg-slatecard/90">
+            <!-- 頂部時間與標籤 -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+              <div class="flex items-center gap-2.5">
+                <span class="px-2.5 py-1 rounded-lg bg-champagne/15 text-champagne font-mono text-sm font-bold tracking-wide">
+                  ${item.time}
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold ${item.badgeColor}">
+                  ${item.badge}
+                </span>
+              </div>
+
+              <!-- Google Maps 導航按鈕組 -->
+              <div class="flex flex-wrap items-center gap-2">
+                <a href="${getMapUrl(item.locationQuery)}" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white/10 hover:bg-champagne hover:text-obsidian text-white border border-white/15 transition">
+                  <span>📍 Google Maps 導航</span>
+                </a>
+                ${item.secondaryQuery ? `
+                  <a href="${getMapUrl(item.secondaryQuery)}" target="_blank" rel="noopener noreferrer"
+                     class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-medium bg-white/5 hover:bg-cobalt/20 hover:text-cobalt text-slate-300 border border-white/10 transition">
+                    <span>🔗 ${item.secondaryLabel || '備用地標'}</span>
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+
+            <!-- 景點標題與描述 -->
+            <h3 class="text-lg sm:text-xl font-bold text-white leading-snug">
+              ${item.title}
+            </h3>
+            <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+              ${item.description}
+            </p>
+
+            <!-- 拍車技巧 & 低底盤路況雙欄卡片 -->
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div class="p-3 rounded-xl bg-obsidian/70 border border-champagne/20">
+                <div class="text-xs font-bold text-champagne flex items-center gap-1.5 mb-1">
+                  <span>📸 拍車與賞景機位重點</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">${item.photoTip}</p>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian/70 border border-emerald-500/25">
+                <div class="text-xs font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+                  <span>🏎️ 低底盤停車與路況檢核</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">${item.chassisTip}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const extensionsHtml = data.nearbyExtensions.map(ext => `
+        <div class="p-4 rounded-2xl bg-carbon border border-white/10 hover:border-champagne/40 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-cobalt/15 text-cobalt border border-cobalt/30">
+                ${ext.category}
+              </span>
+            </div>
+            <h4 class="text-base font-bold text-white">${ext.name}</h4>
+            <p class="mt-1.5 text-xs text-slate-400 leading-relaxed">${ext.desc}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5">
+            <a href="${getMapUrl(ext.query)}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-semibold text-champagne hover:underline">
+              <span>📍 開啟 Google Maps 查看位置 ➔</span>
+            </a>
+          </div>
+        </div>
+      `).join('');
+
+      // 底部上一天/下一天切換按鈕
+      const dayKeys = ['day1', 'day2', 'day3', 'day4', 'day5'];
+      const currentIndex = dayKeys.indexOf(dayKey);
+      const prevDay = currentIndex > 0 ? dayKeys[currentIndex - 1] : null;
+      const nextDay = currentIndex < dayKeys.length - 1 ? dayKeys[currentIndex + 1] : 'checklist';
+
+      container.innerHTML = `
+        <section class="animate-fadeIn">
+          <!-- 當日標題與核心統計 -->
+          <div class="mb-6">
+            <div class="text-xs font-bold tracking-widest uppercase text-champagne mb-1">${data.dayLabel}</div>
+            <h2 class="text-xl sm:text-3xl font-black text-white leading-snug">${data.title}</h2>
+            <p class="mt-2 text-sm text-slate-400 leading-relaxed">${data.subtitle}</p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+            ${statsHtml}
+          </div>
+
+          <!-- 當日重要提醒橫幅 -->
+          <div class="p-4 rounded-2xl border ${alertStyle} mb-8">
+            <div class="font-bold text-sm flex items-center gap-2 mb-1">
+              <span>${alertIcon}</span>
+              <span>${data.alertBanner.title}</span>
+            </div>
+            <p class="text-xs sm:text-sm opacity-90 whitespace-pre-line leading-relaxed">${data.alertBanner.text}</p>
+          </div>
+
+          <!-- 每日精準時間軸 -->
+          <div class="mb-10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span class="w-1.5 h-5 rounded-full bg-champagne"></span>
+                <span>當日精準時間軸與導航細節</span>
+              </h3>
+              <span class="text-xs text-slate-400">共 ${data.timeline.length} 個節點</span>
+            </div>
+            <div class="mt-4">
+              ${timelineHtml}
+            </div>
+          </div>
+
+          <!-- 附近可延伸順遊景點與美食 -->
+          <div class="pt-6 border-t border-white/10">
+            <div class="mb-4">
+              <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span class="w-1.5 h-5 rounded-full bg-cobalt"></span>
+                <span>周邊可延伸順遊景點 ＆ 美食備案</span>
+              </h3>
+              <p class="text-xs text-slate-400 mt-1">若行程進度超前或想彈性微調口味，以下地點皆在當日路線順遊範圍內：</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              ${extensionsHtml}
+            </div>
+          </div>
+
+          <!-- 底部快速換日按鈕 -->
+          <div class="mt-10 flex items-center justify-between gap-4">
+            ${prevDay ? `
+              <button onclick="switchTab('${prevDay}')" class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-bold text-white transition">
+                ← 上一天行程
+              </button>
+            ` : '<div></div>'}
+
+            <button onclick="switchTab('${nextDay}')" class="px-5 py-3 rounded-xl bg-champagne text-obsidian hover:bg-amber-300 text-xs sm:text-sm font-bold shadow-lg shadow-champagne/20 transition">
+              ${nextDay === 'checklist' ? '前往行前裝備檢查清單 →' : '查看下一天行程 →'}
+            </button>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderChecklist() {
+      const container = document.getElementById('app-content');
+
+      // 計算完成進度
+      let totalItems = 0;
+      let completedCount = 0;
+      checklistCategories.forEach(cat => {
+        cat.items.forEach(item => {
+          totalItems++;
+          if (checkedItems[item.id]) completedCount++;
+        });
+      });
+      const progressPct = totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0;
+
+      const categoriesHtml = checklistCategories.map(cat => {
+        const itemsHtml = cat.items.map(item => {
+          const isChecked = !!checkedItems[item.id];
+          return `
+            <label onclick="toggleCheckItem('${item.id}')" class="flex items-start gap-3 p-3 rounded-xl cursor-pointer transition border ${isChecked ? 'bg-emerald-500/10 border-emerald-500/30 text-slate-400 line-through' : 'bg-obsidian/60 border-white/10 hover:border-champagne/40 text-slate-200'}">
+              <div class="mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 border ${isChecked ? 'bg-emerald-500 border-emerald-500 text-obsidian font-bold' : 'border-slate-500 bg-transparent'}">
+                ${isChecked ? '✓' : ''}
+              </div>
+              <span class="text-xs sm:text-sm leading-relaxed select-none">${item.text}</span>
+            </label>
+          `;
+        }).join('');
+
+        return `
+          <div class="glass-panel rounded-2xl p-5 sm:p-6">
+            <h3 class="text-base sm:text-lg font-bold text-white">${cat.title}</h3>
+            <p class="text-xs text-slate-400 mt-1 mb-4">${cat.subtitle}</p>
+            <div class="space-y-2.5">
+              ${itemsHtml}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <section>
+          <div class="mb-6">
+            <div class="text-xs font-bold tracking-widest uppercase text-champagne mb-1">PRE-TRIP CHECKLIST & SUMMARY</div>
+            <h2 class="text-xl sm:text-3xl font-black text-white">行前互動式裝備檢查清單</h2>
+            <p class="mt-2 text-sm text-slate-400">出發前逐項點擊確認（自動儲存勾選狀態於瀏覽器中），確保愛車、縮時器材與栗松溫泉裝備萬無一失。</p>
+          </div>
+
+          <!-- 準備進度條 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-carbon border border-white/10 mb-6">
+            <div class="flex items-center justify-between text-xs sm:text-sm font-bold mb-2">
+              <span class="text-white">行前準備完成度</span>
+              <span class="text-champagne">${completedCount} / ${totalItems} 項 (${progressPct}%)</span>
+            </div>
+            <div class="w-full h-2.5 rounded-full bg-obsidian overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-champagne to-emerald-400 transition-all duration-300" style="width: ${progressPct}%"></div>
+            </div>
+          </div>
+
+          <!-- 三大分類清單 -->
+          <div class="space-y-6">
+            ${categoriesHtml}
+          </div>
+
+          <!-- 返回第一天按鈕 -->
+          <div class="mt-8 flex justify-start">
+            <button onclick="switchTab('day1')" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-champagne hover:text-obsidian text-xs sm:text-sm font-bold text-white transition">
+              ← 返回 Day 1 行程總覽
+            </button>
+          </div>
+        </section>
+      `;
+    }
+
+    // 初始化渲染 Day 1
+    window.addEventListener('DOMContentLoaded', () => {
+      switchTab('day1');
+    });
+  </script>
+</body>
+</html>
