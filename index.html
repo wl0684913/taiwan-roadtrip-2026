@@ -33,7 +33,6 @@
       color: #F1F5F9;
       -webkit-tap-highlight-color: transparent;
     }
-    /* 隱藏橫向捲軸但保留滑動功能 */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -88,7 +87,7 @@
         山海巡航・唯愛婚禮・栗松秘境・太平洋日出縮時
       </h1>
       <p class="mt-2 text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed">
-        完整收錄五天四夜環島時間軸、景點歷史故事與推薦體驗活動，並附上拍車構圖秘訣、IG 熱門打卡美照預覽與一鍵導航，精準對齊 12/5 彰化婚禮、高雄港灣夜拍、南迴順光海岸、栗松野溪溫泉與七星潭日出縮時。
+        完整收錄五天四夜環島時間軸、四晚住宿安排、景點歷史故事與推薦體驗活動，並附上拍車構圖秘訣、IG 熱門打卡美照預覽與一鍵導航，精準對齊 12/5 彰化婚禮、高雄港灣夜拍、南迴順光海岸、栗松野溪溫泉與七星潭日出縮時。
       </p>
 
       <!-- 快速路線總覽條 -->
@@ -137,7 +136,7 @@
           Day 5 (12/8 二)
         </button>
         <button data-tab="checklist" onclick="switchTab('checklist')" class="tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ml-auto">
-          🧰 行前裝備與總覽
+          🧰 行前裝備與住宿總覽
         </button>
       </div>
     </div>
@@ -153,7 +152,7 @@
 
   <script>
     // =========================================================================
-    // 完整五日行程資料庫（移除路況評級與低底盤提醒，新增地點歷史/體驗活動與 IG 美照）
+    // 完整五日行程資料庫
     // =========================================================================
     const itineraryData = {
       day1: {
@@ -163,469 +162,509 @@
         stats: [
           { label: "預估里程", value: "約 195 km" },
           { label: "純車程時間", value: "約 3 小時 10 分" },
-          { label: "當晚住宿區", value: "彰化市區飯店" }
+          { label: "當晚住宿（已確認）", value: "Timios Inn. 提米好旅" }
         ],
+        accommodation: {
+          status: "confirmed",
+          statusLabel: "已確認預訂",
+          name: "Timios Inn. 提米好旅",
+          address: "500彰化縣彰化市成功路277號",
+          description: "位於彰化市成功路核心地段，距離隔天 11:30 婚宴會館（唯愛庭園）僅約 10–12 分鐘車程，緊鄰魚市場爌肉飯、阿璋肉圓等彰化美食商圈，提供質感設計房型與舒適休憩空間。",
+          mapQuery: "Timios Inn. 提米好旅 彰化市成功路277號",
+          igUrl: "https://www.instagram.com/explore/tags/提米好旅/",
+          igTag: "#提米好旅"
+        },
         alertBanner: {
           type: "info",
-          title: "Day 1 駕駛與光影策略重點",
-          text: "早上 10:00 從南港出發走國道三號接台61線西濱快速道路，11:30–12:30 剛好是苗栗海岸線海面最藍、光線最通透的正順光時段。"
+          title: "Day 1 順光拍車與路線提醒",
+          text: "10:00 從南港出發走國道三號接台61線西濱南下，中午抵達苗栗海線剛好是大太陽順光時刻，拍出來的海面與風車最湛藍通透。"
         },
         timeline: [
           {
             time: "10:00",
-            title: "南港出發南下",
-            badge: "出發啟程",
+            title: "台北南港出發 ➔ 國道三號接台61線西濱快速道路南下",
+            badge: "啟程巡航",
             badgeColor: "bg-slate-700 text-slate-200",
-            locationQuery: "台北南港",
-            description: "從南港上國道三號一路南下，於西濱交流道切入台61線西濱快速道路，享受筆直高架海景巡航。",
-            photoTip: "出發前確認行車記錄器記憶卡空間，隨車攜帶超細纖維擦車布應對海風水氣。",
-            historyOrActivity: "台61線西濱快速道路全長逾 300 公里，是台灣最長的南北向快速公路，沿途串聯西部濱海濕地、風力發電機組與漁港風光，被車友譽為台灣西部最療癒的看海公路。",
+            locationQuery: "南港車站",
+            description: "避開早高峰通勤車潮後悠閒出發，走國道三號南下於竹南／後龍一帶銜接台61線西濱快速道路，享受無紅綠燈的海線高速巡航。",
+            photoTip: "出發前確認胎壓與行車記錄器記憶卡空間已清空。",
+            historyOrActivity: "台61線西濱快速公路北起新北八里、南至台南曾文溪，是台灣最長的南北向快速公路，沿途串聯台灣西部海岸線與漁港風光，素有「窮人的高速公路」與最美海線公路之稱。",
             igPhoto: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "西濱海岸公路跑車巡航氛圍示意 · @taiwan_roadtrip",
+            igCaption: "海岸快速公路啟程巡航視野 · @taiwan_roadtrip",
             igUrl: "https://www.instagram.com/explore/tags/西濱快速道路/",
             igTag: "#西濱快速道路"
           },
           {
             time: "11:30",
-            title: "苗栗後龍好望角（第一停車場）＆ 通霄日落大道",
-            badge: "拍車聖地",
+            title: "苗栗後龍好望角 ＆ 通霄日落大道（新埔聯絡道）",
+            badge: "海景拍車聖地",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
             locationQuery: "後龍好望角風景區 第一停車場",
             secondaryQuery: "通霄日落大道",
-            secondaryLabel: "導航：通霄日落大道",
-            description: "中午順光時段抵達苗栗海岸雙地標！先在後龍好望角居高臨下拍白色巨型風車群與台灣海峽，再沿台61線南下至通霄新埔聯絡道拍攝筆直延伸進大海的日落大道。",
-            photoTip: "好望角第一停車場腹地極大，低角度仰拍可將跑車車頭、巨型風車與藍天白雲同時收進鏡頭；通霄日落大道則適合捕捉公路延伸進海平面的透視感。",
-            historyOrActivity: "後龍好望角在日治時期曾是海防軍事要塞，山腳下保存著建於 1922 年的「過港舊隧道」紅磚拱門鐵道遺跡；通霄新埔聯絡道則因筆直朝向台灣海峽，曾獲選全台最美十大景觀公路榜首，極適合沿觀景步道吹海風遠眺海線火車經過。",
+            secondaryLabel: "順遊：通霄日落大道",
+            description: "中午順光時段拍攝巨大白色風車群與台灣海峽同框大片；接著沿台61線往南 15 分鐘即達通霄日落大道，拍下筆直公路延伸進大海的經典構圖。",
+            photoTip: "好望角第一停車場能拍出跑車＋整排大風車＋海平面的壯闊視角；日落大道則適合低角度捕捉車身腰線。",
+            historyOrActivity: "後龍半天寮好望角昔日為海防軍事要塞，現今保留舊碉堡與日治時期海線鐵路「舊白沙屯隧道群」，在此可遠眺風力發電機組與火車沿海岸疾駛而過的畫面，推薦順道走訪步道俯瞰海天一色。",
             igPhoto: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "海岸巨型白色風車與台灣海峽景緻 · @miaoli_travel",
+            igCaption: "苗栗海岸巨型白色風力發電機與海峽全景 · @miaoli_coast",
             igUrl: "https://www.instagram.com/explore/tags/後龍好望角/",
             igTag: "#後龍好望角"
           },
           {
             time: "12:45",
-            title: "苗栗後龍午餐：阿水飯店",
-            badge: "必吃美食",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            title: "午餐時間：苗栗後龍阿水飯店（現流海鮮名店）",
+            badge: "在地美食",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
             locationQuery: "苗栗後龍阿水飯店",
-            description: "苗栗海線超人氣現流海鮮名店，海鮮新鮮、出菜速度快，週五平日中午用餐品質極佳。",
-            photoTip: "餐前可先在店門口或海線漁港周邊記錄在地漁村風情。",
-            historyOrActivity: "創立數十年的後龍老字號海鮮餐廳，早期服務在地漁民與往來商旅，如今成為海線必訪名店。推薦必點現撈清蒸海魚、炒海瓜子與招牌海鮮炒麵，體驗最道地的苗栗海港鮮味。",
+            description: "拍完海景後就近在後龍市區享用高人氣現流海鮮午餐，出菜速度快、食材新鮮，吃完繼續輕鬆南下。",
+            photoTip: "推薦必點現流清蒸魚、炒海瓜子與招牌海鮮炒麵。",
+            historyOrActivity: "後龍緊鄰外埔漁港，阿水飯店是在地經營數十年的老字號海鮮餐廳，每日由漁港直送新鮮漁獲，是許多老饕與車友行經苗栗海線必訪的補給站。",
             igPhoto: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "海線現流海鮮盛宴 · @miaoli_foodie",
-            igUrl: "https://www.instagram.com/explore/tags/阿水飯店/",
-            igTag: "#阿水飯店"
+            igCaption: "外埔漁港直送現流海味饗宴 · @miaoli_food",
+            igUrl: "https://www.instagram.com/explore/tags/後龍美食/",
+            igTag: "#後龍美食"
           },
           {
             time: "14:30",
-            title: "彰化 139 縣道（大彰路綠色隧道）➔ 微熱山丘三合院",
-            badge: "操駕體驗",
+            title: "彰化 139 縣道綠色隧道巡航 ➔ 順遊微熱山丘三合院",
+            badge: "山道操駕體驗",
             badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
-            locationQuery: "南投微熱山丘三合院",
-            secondaryQuery: "彰化139縣道大彰路",
-            secondaryLabel: "導航：139縣道大彰路",
-            description: "下午切入八卦山脈稜線上的 139 縣道（大彰路一段至四段），兩旁高聳小葉欖仁形成筆直綠色隧道，彎道流暢好開；順遊南投端微熱山丘三合院免費品嚐現烤土鳳梨酥與熱烏龍茶。",
-            photoTip: "139 縣道林蔭光影灑落在車身漆面上極具速度感；微熱山丘紅磚三合院則充滿濃濃懷舊人文氣息。",
-            historyOrActivity: "139 縣道沿著八卦山台地最高稜線闢建，橫跨彰化與南投，兩側植滿小葉欖仁形成著名的林蔭大道；終點旁的「微熱山丘」以傳統閩南紅磚三合院起家，推薦入園體驗奉茶文化，坐在老宅廊下品嚐酸甜土鳳梨酥與熱烏龍茶。",
+            locationQuery: "139縣道小葉欖仁綠色隧道",
+            secondaryQuery: "微熱山丘 南投三合院",
+            secondaryLabel: "順遊：微熱山丘",
+            description: "切入彰化與南投交界的八卦山稜線公路（大彰路），兩旁高聳小葉欖仁交織成綠色隧道，彎道流暢好開，順遊微熱山丘三合院免費品嚐熱烏龍茶與現烤土鳳梨酥。",
+            photoTip: "綠色隧道陽光灑落樹梢的光影斑駁非常適合拍攝車身流線光澤。",
+            historyOrActivity: "139 縣道沿八卦山台地稜線修築，早期為南投山區農產運往彰化的重要山道；沿途紅土丘陵盛產鳳梨與茶葉，微熱山丘便是在這座百年三合院發跡，免費奉茶奉餅展現濃厚台灣人情味。",
             igPhoto: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "山脊林蔭綠色隧道光影 · @changhua_139",
+            igCaption: "139縣道小葉欖仁林蔭綠色隧道光影 · @changhua_139",
             igUrl: "https://www.instagram.com/explore/tags/139縣道/",
             igTag: "#139縣道"
           },
           {
             time: "16:30",
-            title: "八卦山大佛風景區（九龍池觀景台）看夕陽",
-            badge: "黃昏大景",
-            badgeColor: "bg-orange-500/20 text-orange-300 border border-orange-500/40",
-            locationQuery: "八卦山大佛風景區九龍池觀景台",
-            description: "順著 139 縣道下山即達八卦山制高點，在九龍池觀景台俯瞰整個彰化平原與遠方台灣海峽的日落晚霞。",
-            photoTip: "16:30–17:10 為 12 月初夕陽黃金時刻，可在九龍池弧形觀景步道捕捉金色夕陽與城市天際線。",
-            historyOrActivity: "八卦山大佛竣工於 1961 年，高約 22 公尺，曾為亞洲第一大佛，是彰化最具代表性的歷史文化地標。推薦沿著「八卦山天空步道」漫步穿梭於樹冠層之間，居高臨下欣賞彰化市景與落日餘暉。",
+            title: "八卦山大佛風景區（九龍池觀景台看夕陽）",
+            badge: "黃金日落",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "八卦山大佛風景區",
+            description: "順著 139 縣道下山抵達彰化地標八卦山，12 月初約 17:05 日落，在九龍池環形觀景台可 180 度俯瞰整個彰化平原與台灣海峽晚霞。",
+            photoTip: "黃昏魔幻時刻可遠眺彰化市區萬家燈火初上的迷人景色。",
+            historyOrActivity: "八卦山大佛建於 1961 年，高約 22 公尺，以鋼筋水泥雕塑而成，曾有「亞洲第一大佛」美譽；周邊「八卦山天空步道」串聯大佛與國立彰化生活美學館，適合傍晚散步吹風俯瞰彰化市景。",
             igPhoto: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "八卦山俯瞰平原與落日餘暉 · @changhua_view",
-            igUrl: "https://www.instagram.com/explore/tags/八卦山大佛/",
-            igTag: "#八卦山大佛"
+            igCaption: "八卦山九龍池俯瞰彰化平原金色晚霞 · @changhua_view",
+            igUrl: "https://www.instagram.com/explore/tags/八卦山/",
+            igTag: "#八卦山"
           },
           {
             time: "17:30",
-            title: "彰化市區晚餐：魚市場爌肉飯 ＆ 大元鹹麻糬",
-            badge: "排隊名店",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
-            locationQuery: "彰化魚市場爌肉飯",
-            secondaryQuery: "彰化大元鹹麻糬",
-            secondaryLabel: "導航：大元鹹麻糬",
-            description: "直奔 16:30 開賣的彰化傳奇晚場「魚市場爌肉飯」，品嚐肥瘦相間、入口即化的頂級爌肉；順路至城隍廟旁購買「大元鹹麻糬」當車上點心。",
-            photoTip: "油亮琥珀色的爌肉搭配竹籤固定，是彰化美食文化最具代表性的經典特寫畫面。",
-            historyOrActivity: "彰化素有「爌肉飯王國」美譽，從早到晚皆有不同名店接力營業，魚市場爌肉飯以獨門老滷汁慢火燉煮，皮Q肉嫩；鄰近城隍廟的「大元餅行」創立逾五十年，首創將瘦肉、竹筍與紅蔥頭包入軟糯麻糬中，鹹甜交織極具特色。",
-            igPhoto: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "彰化經典古早味爌肉飯與伴手禮 · @changhua_eats",
-            igUrl: "https://www.instagram.com/explore/tags/魚市場爌肉飯/",
-            igTag: "#魚市場爌肉飯"
+            title: "彰化市區晚餐：魚市場爌肉飯 ＆ 順買大元鹹麻糬",
+            badge: "傳奇名店",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "魚市場爌肉飯",
+            secondaryQuery: "大元餅行(鹹麻糬)",
+            secondaryLabel: "伴手禮：大元鹹麻糬",
+            description: "16:30 開賣的彰化晚場傳奇名店，週五傍晚抵達不用像假日大排長龍，肥瘦相間、入口即化的爌肉飯絕對令人難忘；順道帶盒大元鹹麻糬當車上點心。",
+            photoTip: "爌肉飯搭配半熟荷包蛋與滷豆腐是內行老饕標準吃法。",
+            historyOrActivity: "彰化爌肉飯文化源於早期農業與市場勞動人口需要高熱量飽足感，發展出「24 小時接力營業」的獨特飲食生態；大元餅行則隱身於彰化市城隍廟旁巷弄超過五十年，以包入竹筍、瘦肉與紅蔥頭的鹹麻糬聞名全台。",
+            igPhoto: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "彰化宵夜傳奇油亮入味爌肉飯 · @changhua_eats",
+            igUrl: "https://www.instagram.com/explore/tags/彰化美食/",
+            igTag: "#彰化美食"
           },
           {
             time: "19:30",
-            title: "入住彰化市區飯店",
+            title: "入住彰化住宿：Timios Inn. 提米好旅",
             badge: "住宿休憩",
             badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
-            locationQuery: "彰化市區飯店",
-            description: "辦理入住並好好休息，距離隔天唯愛庭園婚宴會館僅約 15–20 分鐘車程，養精蓄銳準備參加週六喜宴。",
+            locationQuery: "Timios Inn. 提米好旅 彰化市成功路277號",
+            description: "前往彰化市成功路辦理入住「Timios Inn. 提米好旅」，距離隔天唯愛庭園婚宴會館僅約 10–12 分鐘車程，養精蓄銳準備參加週六喜宴。",
             photoTip: "晚上可簡單擦拭車身灰塵，讓愛車明天以最亮麗姿態出席婚禮。",
-            historyOrActivity: "彰化市建城逾三百年（古稱半線），入夜後可至附近的「扇形車庫」外圍散步感受鐵道文化氛圍，或早點休息為隔天的婚禮與南下長途旅程儲備體力。",
+            historyOrActivity: "彰化市建城逾三百年（古稱半線），提米好旅位處市中心精華地帶，入夜後可至附近的「扇形車庫」外圍或市區街道散步感受老城氛圍，早點休息為隔天的婚禮與南下長途旅程儲備體力。",
             igPhoto: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "精品旅宿休憩備戰隔日婚禮 · @taiwan_stay",
-            igUrl: "https://www.instagram.com/explore/tags/彰化住宿/",
-            igTag: "#彰化住宿"
+            igCaption: "Timios Inn. 提米好旅質感休憩備戰隔日婚禮 · @timios_inn",
+            igUrl: "https://www.instagram.com/explore/tags/提米好旅/",
+            igTag: "#提米好旅"
           }
         ],
         nearbyExtensions: [
           {
-            name: "LeeLi's 餐廳（鹿港）",
-            category: "IG 質感餐廳",
-            desc: "鹿港超人氣工業風與植栽設計感餐廳，結合在地食材的創意西式料理與甜點，距離台61線鹿港交流道僅 5 分鐘。",
-            query: "鹿港 LeeLi's"
+            name: "高美濕地風車大道（美堤街外圍）",
+            category: "順遊海景",
+            desc: "若下午想走海線替代 139 縣道，可沿台61線至高美濕地外圍堤防大道，整排大風車配夕陽倒影極美。",
+            query: "高美濕地"
           },
           {
-            name: "八棧食堂（彰化市）",
-            category: "深夜美食備案",
-            desc: "若魚市場爌肉飯售完或較晚用餐，八棧食堂營業至午夜 12 點，高評價日式燒肉丼飯與鍋物，環境明亮有質感。",
-            query: "彰化八棧食堂"
+            name: "台中清水鰲峰山觀景平台",
+            category: "制高點夜景",
+            desc: "距離高美濕地僅 10 分鐘車程，180 度扇形木棧觀景台俯瞰整個中部海岸線與台中港。",
+            query: "鰲峰山觀景平台"
           },
           {
-            name: "瘦子咖啡 Skinny Cafe",
-            category: "文青咖啡廳",
-            desc: "彰化市區 IG 評價極高的質感手沖咖啡與手作甜點店，適合下午提早進市區時歇腳。",
-            query: "彰化瘦子咖啡"
+            name: "彰化市｜八棧食堂",
+            category: "深夜備案美食",
+            desc: "若抵達彰化時間較晚或魚市場爌肉飯售完，這家營業至午夜的高質感日式燒肉丼與鍋物店評價極高。",
+            query: "八棧食堂"
           },
           {
-            name: "尋鹿咖啡（彰化店）",
-            category: "下午茶輕食",
-            desc: "主打可愛小鹿拉花與厚鬆餅早午餐，空間溫馨舒適，適合悠閒享受午後時光。",
-            query: "彰化尋鹿咖啡"
+            name: "彰化市｜瘦子咖啡 Skinny Cafe",
+            category: "IG 質感咖啡",
+            desc: "彰化市區極具工業風設計感的手沖咖啡與手作甜點店，適合下午歇腳。",
+            query: "瘦子咖啡"
           }
         ]
       },
 
       day2: {
         dayLabel: "DAY 2 · 12/5（週六）",
-        title: "【婚禮日】彰化唯愛庭園 ➔ 南下高雄港灣黃金夕陽與夜拍",
-        subtitle: "上午從容出席唯愛庭園「仙杜瑞拉廳」11:30 婚宴，午後沿國道一號一路南下高雄，傍晚捕捉亞洲新灣區日落與未來感蜂巢建築夜拍。",
+        title: "彰化唯愛庭園婚禮 ➔ 國道南下 ➔ 高雄港灣日落夜拍 ➔ 入住屏東",
+        subtitle: "上午從容出席唯愛庭園（仙杜瑞拉廳）喜宴，午後南下高雄在亞洲新灣區與駁二倉庫群捕捉港灣夜色與跑車光影，晚間前往屏東市入住「Hello inn 哈囉行旅屏東館」，離隔天南迴公路更近一步！",
         stats: [
-          { label: "預估里程", value: "約 190 km" },
-          { label: "純車程時間", value: "約 2 小時 30 分" },
-          { label: "當晚住宿區", value: "高雄市區飯店" }
+          { label: "預估里程", value: "約 215 km" },
+          { label: "純車程時間", value: "約 2 小時 55 分" },
+          { label: "當晚住宿（已確認）", value: "Hello inn 哈囉行旅屏東館" }
         ],
+        accommodation: {
+          status: "confirmed",
+          statusLabel: "已確認預訂",
+          name: "Hello inn 哈囉行旅屏東館",
+          address: "900屏東縣屏東市瑞光里瑞民路6號1樓",
+          description: "位於屏東市瑞民路，高屏大橋過橋進入屏東市區即可抵達，距離高雄駁二港區僅約 25–30 分鐘車程。週六晚間入住屏東市不僅避開高雄週末市區住宿人潮，隔天（12/6 週日）一早更能直接沿台1線、台9線南下前往南迴公路，省下約半小時清晨車程！",
+          mapQuery: "Hello inn 哈囉行旅屏東館 屏東縣屏東市瑞民路6號",
+          igUrl: "https://www.instagram.com/explore/tags/哈囉行旅屏東館/",
+          igTag: "#哈囉行旅屏東館"
+        },
         alertBanner: {
           type: "gold",
-          title: "今日核心任務：11:30 準時參加婚禮",
-          text: "建議 10:45 提前抵達唯愛庭園，不僅能從容赴宴，還能在開席前趁白天順光幫愛車與歐式白色莊園合影！"
+          title: "婚禮日核心時間鎖定：11:30 唯愛庭園（仙杜瑞拉廳）",
+          text: "建議 10:45 提早抵達唯愛庭園（從提米好旅出發僅約 10–12 分鐘），有充裕時間在歐式白色莊園建築前幫愛車留影；14:30 喜宴結束出發南下，17:00 剛好趕上高雄港灣日落，晚間用完餐再順路開 25 分鐘前往屏東入住！"
         },
         timeline: [
           {
             time: "10:45",
             title: "抵達彰化「唯愛庭園 Vena Manor（仙杜瑞拉廳）」",
-            badge: "核心任務",
+            badge: "本日核心婚禮",
             badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
-            locationQuery: "彰化唯愛庭園 Vena Manor",
-            description: "位於彰化市大埔路的歐式莊園婚宴會館，提前 45 分鐘抵達從容赴宴並拍照留念。",
-            photoTip: "園區內白色歐式教堂與大草皮建築極具異國氛圍，開席前光線柔和，非常適合與愛車及親友合影。",
-            historyOrActivity: "唯愛庭園坐落於八卦山腳下，園區結合歐洲古典城堡建築、純白證婚教堂與萬坪翠綠草皮，是中台灣著名的浪漫莊園婚宴聖地。宴會前可先在歐式噴泉廣場與庭園步道散步拍照。",
+            locationQuery: "唯愛庭園 Vena Manor",
+            description: "提前 45 分鐘抵達位於彰化市大埔路的唯愛庭園，園區擁有純白歐式莊園教堂與大片綠地，11:30 準時參加「仙杜瑞拉廳」喜宴。",
+            photoTip: "早上 11:00 前陽光斜射白色莊園建築，超跑停在歐式建築背景前非常有異國婚禮大片質感。",
+            historyOrActivity: "唯愛庭園坐落於彰化八卦山麓自然綠意之中，結合歐式古典莊園建築、戶外證婚教堂與大片草坪，是中台灣極具代表性的浪漫婚宴莊園。",
             igPhoto: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "唯愛庭園歐式白色莊園浪漫氛圍 · @venamanor",
-            igUrl: "https://www.instagram.com/explore/tags/唯愛庭園/",
-            igTag: "#唯愛庭園"
-          },
-          {
-            time: "11:30",
-            title: "參加婚禮喜宴（仙杜瑞拉廳）",
-            badge: "喜宴時刻",
-            badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
-            locationQuery: "彰化唯愛庭園 Vena Manor",
-            description: "享受喜宴美食與祝福新人，預計 14:30 圓滿結束後啟程南下。",
-            photoTip: "仙杜瑞拉廳挑高水晶燈飾華麗典雅，適合與新人及好友留下珍貴合照。",
-            historyOrActivity: "在浪漫的歐式宴會廳內見證新人幸福時刻，享用主廚精緻婚宴佳餚，並與久違的親友敘舊交流。",
-            igPhoto: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "溫馨璀璨的婚宴祝福時刻 · @wedding_taiwan",
+            igCaption: "唯愛庭園純白歐式莊園建築與草坪 · @venamanor_tw",
             igUrl: "https://www.instagram.com/explore/tags/唯愛庭園/",
             igTag: "#唯愛庭園"
           },
           {
             time: "14:30",
-            title: "彰化出發 ➔ 國道一號直奔高雄",
+            title: "喜宴圓滿結束 ➔ 國道一號一路向南直奔高雄",
             badge: "高速巡航",
-            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
-            locationQuery: "高雄流行音樂中心",
-            description: "從彰化上國道一號一路向南，穿過嘉南平原直達南台灣，約 17:00 抵達高雄港灣區域，剛好無縫銜接 17:15 左右的港邊日落。",
-            photoTip: "越往南行氣溫越溫暖晴朗，傍晚進入高雄港區時夕陽斜射極具港都電影感。",
-            historyOrActivity: "沿國道一號縱貫台灣西部精華地帶，從中台灣丘陵一路馳騁至熱帶港都高雄，感受南北氣候與地景的迷人轉換。",
-            igPhoto: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "午後一路向南奔赴港都夕陽 · @kaohsiung_drive",
-            igUrl: "https://www.instagram.com/explore/tags/高雄景點/",
-            igTag: "#高雄景點"
+            badgeColor: "bg-slate-700 text-slate-200",
+            locationQuery: "國道一號彰化交流道",
+            description: "從彰化市區上國道一號一路向南，車程約 2.5 小時，中途可視需求於西螺或東山服務區稍作休息。",
+            photoTip: "若於東山服務區停留，巨大百年老榕樹與寬闊廣場也很適合伸展。",
+            historyOrActivity: "國道一號中山高速公路於 1978 年全線通車，是台灣第一條南北向高速公路，見證了台灣經濟起飛與西部走廊的串聯；沿途橫跨濁水溪、嘉南平原直至港都高雄。",
+            igPhoto: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "西部高速走廊奔向南台灣暖陽 · @taiwan_highway",
+            igUrl: "https://www.instagram.com/explore/tags/環島旅行/",
+            igTag: "#環島旅行"
           },
           {
             time: "17:00",
-            title: "高雄港灣黃金夕陽 ＆ 流行音樂中心蜂巢建築夜拍",
-            badge: "拍車聖地",
+            title: "高雄港區日落：棧貳庫 KW2 ＆ 駁二蓬萊港區",
+            badge: "港灣日落大片",
+            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            locationQuery: "棧貳庫 KW2",
+            secondaryQuery: "駁二藝術特區",
+            secondaryLabel: "駁二大義倉庫群",
+            description: "傍晚 17:00 抵達高雄港邊，金黃色晚霞映照在高雄港水面與百年歷史倉庫群上，海風吹拂非常愜意。",
+            photoTip: "以港邊貨櫃、白色倉庫與夕陽餘暉為背景，低角度拍攝跑車車尾與寬體輪拱線條極為帥氣。",
+            historyOrActivity: "棧貳庫前身為建於 1914 年日治時期的「新濱町岸壁荷役倉庫」，見證高雄港百年砂糖與香蕉外銷歷史，經活化修復後保留老磚牆與木屋架，現為結合海景文創、在地美食與港灣散步的地標。",
+            igPhoto: "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "高雄港百年棧貳庫與夕陽海風剪影 · @kw2_kaohsiung",
+            igUrl: "https://www.instagram.com/explore/tags/棧貳庫/",
+            igTag: "#棧貳庫"
+          },
+          {
+            time: "18:00",
+            title: "高雄流行音樂中心（海風廣場／愛河灣蜂巢建築夜拍）",
+            badge: "都會夜拍聖地",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
-            locationQuery: "高雄流行音樂中心海風廣場",
-            secondaryQuery: "棧貳庫 KW2",
-            secondaryLabel: "導航：棧貳庫 KW2",
-            description: "傍晚時分先在棧貳庫 KW2 與駁二蓬萊港區捕捉金黃色晚霞映照海面與車身；入夜點燈後轉往高雄流行音樂中心海風廣場，拍攝流光溢彩的六角形蜂巢建築與愛河灣水面倒影。",
-            photoTip: "開啟愛車日行燈與尾燈，利用高流中心冷暖交織的建築燈光在車身鈑金上拉出絕美光條反光，是南部車友最經典的夜拍聖地！",
-            historyOrActivity: "高雄流行音樂中心由西班牙建築團隊結合台灣建築師設計，以海浪、珊瑚與海豚等海洋元素為靈感，打造出獨特的六角形蜂巢與音浪塔造型；鄰近的棧貳庫則建於 1914 年日治時期，由百年磚造砂糖倉庫活化轉型為文創海景基地。",
-            igPhoto: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "港灣現代建築燈光與愛河灣夜色 · @khh_nightview",
+            locationQuery: "高雄流行音樂中心 海風廣場",
+            secondaryQuery: "大港橋",
+            secondaryLabel: "順遊：大港橋夜景",
+            description: "入夜後高流六角形蜂巢建築群點亮流光溢彩的燈光秀，搭配愛河灣水面倒影與對岸高雄 85 大樓天際線，是南部跑車車友最愛的都會夜拍聖地。",
+            photoTip: "開啟車頭日行燈與尾燈光條，利用水面倒影與建築霓虹光影拍出賽博龐克未來感大片。",
+            historyOrActivity: "高雄流行音樂中心由西班牙建築團隊結合台灣團隊設計，以海洋意象（珊瑚礁、海浪、鯨魚與海豚）打造出高低錯落的蜂巢幾何建築群，緊鄰全台首座水平旋轉景觀橋「大港橋」，夜間點燈後展現港都現代建築美學。",
+            igPhoto: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "愛河灣畔高流蜂巢幾何建築璀璨夜色 · @kpmc_night",
             igUrl: "https://www.instagram.com/explore/tags/高雄流行音樂中心/",
             igTag: "#高雄流行音樂中心"
           },
           {
-            time: "19:00",
-            title: "高雄晚餐：永心浮島 YONGXIN FLOAT（港景餐酒館）",
-            badge: "IG 熱門美食",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
+            time: "19:15",
+            title: "港景晚餐：永心浮島 YONGXIN FLOAT（駁二大義倉庫）",
+            badge: "IG 爆紅餐酒",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
             locationQuery: "永心浮島 YONGXIN FLOAT",
-            secondaryQuery: "高雄老二腿庫飯",
-            secondaryLabel: "備案：老二腿庫飯",
-            description: "位於駁二大義倉庫 C6 棟的超人氣台式時髦海鮮餐酒館，落地窗直接面向大港橋與港灣夜景，裝潢復古摩登（週六建議提前訂位）；若想吃道地台味宵夜，也可選興中二路「老二腿庫飯」。",
-            photoTip: "餐廳戶外座位與落地窗緊鄰大港橋水面，搭配港灣倒影與精緻台式調酒極為出片。",
-            historyOrActivity: "由高雄知名台菜品牌「永心鳳茶」打造的全新海鮮餐酒館概念店，融合復古港都美學與現代微醺氛圍，主打高雄在地現流海鮮創意料理與特色茶酒，是近年高雄港區最受矚目的約會與聚餐地標。",
-            igPhoto: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "駁二港邊時髦復古餐酒館夜景 · @yongxin_float",
+            description: "坐落於大義倉庫群海景第一排的台式時髦海鮮餐酒館，大片落地窗直接面向大港橋與港灣夜景，氛圍摩登有質感（建議提前線上訂位）。",
+            photoTip: "戶外露台座位能直接與大港橋夜景合照，推薦台式海鮮燉飯與炙燒小卷。",
+            historyOrActivity: "永心鳳茶旗下新品牌「永心浮島」進駐駁二大義倉庫 C6 棟，將高雄港海洋文化與台菜熱炒元素轉化為摩登餐酒體驗，在老倉庫工業風架構中品嚐現流海鮮與特調飲品，體驗港都夜生活。",
+            igPhoto: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "駁二港邊落地窗海景與台式時髦餐酒 · @yongxin_float",
             igUrl: "https://www.instagram.com/explore/tags/永心浮島/",
             igTag: "#永心浮島"
           },
           {
             time: "21:30",
-            title: "入住高雄市區飯店",
+            title: "前往屏東入住：Hello inn 哈囉行旅屏東館",
             badge: "住宿休憩",
             badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
-            locationQuery: "高雄鹽埕區飯店",
-            description: "建議入住鹽埕區（駁二周邊）、前金區或左營高鐵特區，隔天一早直接上國道十號接國道三號往南迴公路出發最順路。",
+            locationQuery: "Hello inn 哈囉行旅屏東館 屏東縣屏東市瑞民路6號",
+            description: "結束高雄港灣夜拍與晚餐後，順著台1線過高屏大橋約 25–30 分鐘即可抵達屏東市瑞民路辦理入住「Hello inn 哈囉行旅屏東館」，直接搶佔隔天一早直奔南迴公路的絕佳起跑位置。",
             photoTip: "為手機、相機與運動相機充滿電，明天上午將迎來整趟環島最美的南迴順光海岸！",
-            historyOrActivity: "鹽埕區為高雄最早開發的繁華商業區，保留了許多昭和時期老建築與老字號美食，夜晚在愛河畔散步吹微風十分愜意。",
+            historyOrActivity: "屏東市古稱「阿猴」，是南台灣重要的農業與文化重鎮；入住屏東市區除了能輕鬆銜接隔日台1線南下動線，若還有宵夜胃口，附近的屏東觀光夜市（民族路夜市）亦有許多經營一甲子的在地老店。",
             igPhoto: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "港都精品旅宿夜景休憩 · @khh_hotel",
-            igUrl: "https://www.instagram.com/explore/tags/高雄住宿/",
-            igTag: "#高雄住宿"
+            igCaption: "屏東質感旅宿休憩備戰隔日南迴海岸 · @hello_inn_pingtung",
+            igUrl: "https://www.instagram.com/explore/tags/哈囉行旅屏東館/",
+            igTag: "#哈囉行旅屏東館"
           }
         ],
         nearbyExtensions: [
           {
-            name: "大港橋（駁二大義倉庫群）",
-            category: "地標散步",
-            desc: "全台首座水平旋轉景觀橋，純白流線型橋身在夜間打燈後極具港都浪漫氛圍，每日下午均有旋轉開合秀。",
-            query: "高雄大港橋"
+            name: "新濱・駅前（鼓山區臨海三路）",
+            category: "百年銀行古蹟咖啡",
+            desc: "由百年舊三和銀行改建的復古銀行風咖啡餐酒館，挑高建築與金庫設計超有氛圍，就在哈瑪星捷運站旁。",
+            query: "新濱・駅前"
           },
           {
-            name: "新濱・駅前（鼓山區）",
-            category: "百年銀行咖啡廳",
-            desc: "由百年舊三和銀行改建的復古銀行風咖啡餐酒館，挑高空間與金庫設計極具特色，距離棧貳庫僅 3 分鐘。",
-            query: "高雄新濱駅前"
+            name: "老二腿庫飯（苓雅區興中二路）",
+            category: "深夜宵夜傳奇",
+            desc: "21:00 營業至凌晨的高雄宵夜場名店，入口即化腿庫飯搭配現炒生炒花枝，在地人與車友聚會最愛。",
+            query: "老二腿庫飯"
           },
           {
-            name: "鹽埕區老字號美食圈（鴨肉珍 / 港園牛肉麵 / 樺達奶茶）",
+            name: "鹽埕區老字號小吃（鴨肉珍 / 港園牛肉麵）",
             category: "在地經典小吃",
-            desc: "全數集中在駁二周邊 5 分鐘車程內，若不想吃餐酒館，這三家在地傳奇老店絕對不踩雷。",
-            query: "高雄鹽埕鴨肉珍"
+            desc: "距離駁二僅 3 分鐘車程，若想吃道地高雄傳統小吃，這兩家老店口味極具代表性。",
+            query: "鴨肉珍"
           },
           {
-            name: "瑞豐夜市（左營區）",
-            category: "週六夜市體驗",
-            desc: "週六有營業的高雄指標夜市，若住宿選在左營高鐵周邊，晚上可順道逛夜市感受南台灣熱情。",
-            query: "高雄瑞豐夜市"
+            name: "西子灣觀景平台 / 英國領事館山下海堤",
+            category: "順遊海景",
+            desc: "若傍晚 16:30 前就抵達高雄，可順道繞至西子灣看大船入港與海平線夕陽。",
+            query: "西子灣觀景平台"
           }
         ]
       },
 
       day3: {
         dayLabel: "DAY 3 · 12/6（週日）",
-        title: "高雄 ➔ 南迴正順光太平洋拍車 ➔ 台東池上縱谷秘境",
-        subtitle: "上午行經南迴公路時太陽位於東方海面，太平洋呈現最深邃寶石藍的「正順光」；下午進駐池上，精準導航至無管制的鄉間大道拍車。",
+        title: "屏東出發 ➔ 南迴正順光太平洋海岸 ➔ 台東池上縱谷拍車",
+        subtitle: "從屏東市出發距離南迴公路更近！上午太陽位於東方海面上，太平洋海水呈現最深邃寶石藍的「正順光」，是整趟環島拍車大片產出率最高的黃金路段！",
         stats: [
           { label: "預估里程", value: "約 235 km" },
           { label: "純車程時間", value: "約 3 小時 50 分" },
-          { label: "當晚住宿區", value: "台東池上或關山（距南橫入口15分）" }
+          { label: "當晚住宿（已確認）", value: "禮物盒子青年旅館" }
         ],
+        accommodation: {
+          status: "confirmed",
+          statusLabel: "已確認預訂",
+          name: "禮物盒子民宿（禮物盒子青年旅館）",
+          address: "958臺東縣池上鄉福原村忠孝路89號",
+          description: "位於池上鄉福原村忠孝路，步行即可品嚐福原豆腐店與大池豆皮店；距離隔天一早前往南橫栗松溫泉的台20線入口極近，非常方便清晨與 4x4 接駁車會合出發。",
+          mapQuery: "禮物盒子民宿 台東縣池上鄉忠孝路89號",
+          igUrl: "https://www.instagram.com/explore/tags/禮物盒子青年旅館/",
+          igTag: "#禮物盒子青年旅館"
+        },
         alertBanner: {
           type: "warning",
-          title: "池上拍車導航提醒：請使用下方 4 個精準周邊地標！",
-          text: "伯朗大道核心農路為全年車輛管制區（僅限單車與步行），請直接導航下方為您設定好的 4 個外圍合法全柏油地標，同樣能拍出筆直大道與中央山脈雲瀑大片。"
+          title: "池上拍車管制區提醒（已為您鎖定合法全柏油導航地標）",
+          text: "伯朗大道與天堂路核心農路為全年車輛管制區（禁行汽車），且 197 縣道南段（23K–37K）為碎石泥土路。請務必使用下方提供的「萬安磚窯廠、伯朗大道入口牌坊外圍、大坡池停車場、金色豐收館」四個地標取景。"
         },
         timeline: [
           {
             time: "09:00",
-            title: "高雄市區出發 ➔ 國三南下接台9線南迴公路",
-            badge: "出發啟程",
+            title: "屏東市出發 ➔ 台1線接台9線南迴改奔向太平洋",
+            badge: "出發奔向太平洋",
             badgeColor: "bg-slate-700 text-slate-200",
-            locationQuery: "台東多良觀光車站",
-            description: "從高雄上國道十號接國道三號一路南下至林邊交流道，接台1線、台9線草埔森永隧道進入台東海岸。",
-            photoTip: "草埔森永隧道出口接上太平洋海岸的瞬間視野豁然開朗，適合記錄這份感動。",
-            historyOrActivity: "南迴公路自清代起便是連接屏東與台東的歷史古道，歷經多年拓寬與草埔森永隧道通車後，大幅縮短翻越中央山脈南端的時間，將壯麗的太平洋海岸線呈現在旅人眼前。",
+            locationQuery: "南迴改草埔森永隧道",
+            description: "從 Hello inn 哈囉行旅屏東館出發，沿台1線屏鵝公路一路向南經潮州、枋寮接台9線南迴改穿越中央山脈南端，出安朔隧道瞬間太平洋海景撲面而來。",
+            photoTip: "準備好行車記錄器或車內運動相機，即將進入無敵海景路段。",
+            historyOrActivity: "南迴公路最早開闢於清代「浸水營古道」與日治時期理蕃道路，2019 年「南迴改（草埔森永隧道）」通車後大幅縮短屏東至台東車程，穿越中央山脈南端尾稜後即迎來開闊的太平洋海岸線。",
             igPhoto: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "翻越山脈迎向蔚藍太平洋海岸 · @taitung_southlink",
+            igCaption: "穿越中央山脈南端迎向湛藍太平洋 · @taitung_drive",
             igUrl: "https://www.instagram.com/explore/tags/南迴公路/",
             igTag: "#南迴公路"
           },
           {
             time: "10:45",
-            title: "南迴海岸正順光連拍：多良車站 ➔ 金崙大橋 ➔ 華源海灣",
-            badge: "拍車聖地",
+            title: "南迴海岸三連拍：多良車站下方路肩 ➔ 金崙大橋 ➔ 華源海灣",
+            badge: "正順光海景大片",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
             locationQuery: "多良觀光車站",
-            secondaryQuery: "華源海灣 HuaYuan Bay",
-            secondaryLabel: "導航：華源海灣",
-            description: "上午太陽在東側太平洋上方，海水呈現極致寶石藍！依序停靠「多良車站下方海側觀景區」、行駛全台最美海上高架「金崙大橋」，以及緊鄰椰林礫灘的「華源海灣」。",
-            photoTip: "金崙大橋行駛前可先架好車內運動相機錄製第一視角海上馳騁大片；華源海灣路旁觀景區能同時拍下愛車、椰子樹林與太平洋海平面。",
-            historyOrActivity: "多良車站原為南迴鐵路招呼站，因緊鄰太平洋且設有紅色欄杆月台，被鐵道迷譽為「全台最美車站」；金崙大橋則採高架設計跨越金崙溪口，行駛其上彷彿直接馳騁於太平洋海面之上。",
+            secondaryQuery: "華源海灣",
+            secondaryLabel: "順遊：華源海灣",
+            description: "上午太陽直射太平洋海面，海水呈寶石藍與牛奶藍漸層！依序停靠多良車站下方海側路肩、動態錄影駛過貼海高架的金崙大橋，再到華源海灣拍椰林海灘車照。",
+            photoTip: "金崙大橋橋上禁止臨停，建議由副駕或運動相機錄製動態追焦影片，下橋後再於華源海灣靜態拍車。",
+            historyOrActivity: "多良車站原為南迴鐵路招呼站，因月台紅色欄杆緊鄰太平洋與山壁而被譽為「全台最美車站」；金崙大橋則採高架化設計跨越金崙溪口，將海景與山景完整保留給用路人，行駛其上彷彿直奔太平洋。",
             igPhoto: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "南迴最美海岸公路與寶石藍太平洋 · @duoliang_station",
-            igUrl: "https://www.instagram.com/explore/tags/多良車站/",
-            igTag: "#多良車站"
+            igCaption: "南迴公路正順光太平洋漸層牛奶藍海景 · @duoliang_coast",
+            igUrl: "https://www.instagram.com/explore/tags/金崙大橋/",
+            igTag: "#金崙大橋"
           },
           {
             time: "12:30",
-            title: "午餐：太麻里「鼎倫牛肉麵」或 台東市區名店",
-            badge: "必吃美食",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
-            locationQuery: "太麻里鼎倫牛肉麵",
-            secondaryQuery: "台東榕樹下米苔目",
+            title: "午餐時間：太麻里「鼎倫牛肉麵」或 台東市區名店",
+            badge: "在地美食",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "鼎倫牛肉麵",
+            secondaryQuery: "榕樹下米苔目",
             secondaryLabel: "備案：榕樹下米苔目",
-            description: "南迴出口第一站超人氣「鼎倫牛肉麵」，大塊軟嫩牛肉配濃郁湯頭；若想進台東市區，也可選擇「榕樹下米苔目」或「藍蜻蜓速食」。",
-            photoTip: "滿滿一碗厚切半筋半肉牛肉麵搭配招牌滷味拼盤，是南迴旅途中最滿足的畫面。",
-            historyOrActivity: "位於太麻里金崙村的鼎倫牛肉麵，最初只是服務當地居民與工程人員的小麵攤，憑藉真材實料的厚實牛肉塊與獨門豆瓣湯頭口耳相傳，成為每位旅人經過南迴必停的排隊名店。",
-            igPhoto: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "南迴出口超人氣厚切牛肉麵 · @taitung_food",
-            igUrl: "https://www.instagram.com/explore/tags/鼎倫牛肉麵/",
-            igTag: "#鼎倫牛肉麵"
+            description: "南迴公路出口第一站超人氣名店，大塊軟嫩牛肉搭配濃郁紅燒湯頭與手工小菜；若想進台東市區，也可選擇榕樹下米苔目或藍蜻蜓炸雞。",
+            photoTip: "太麻里路段用完餐後，下午直接沿台9線花東縱谷北上前往池上。",
+            historyOrActivity: "太麻里排灣族語意為「日照升起之地」，是台灣跨年迎曙光的知名勝地；鼎倫牛肉麵隱身於太麻里街巷內，以真材實料的大塊牛腱肉與Q彈麵條成為南迴旅客口耳相傳的排隊名店。",
+            igPhoto: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "南迴出口超人氣紅燒半筋半肉牛肉麵 · @taimali_food",
+            igUrl: "https://www.instagram.com/explore/tags/太麻里美食/",
+            igTag: "#太麻里美食"
           },
           {
-            time: "15:30",
-            title: "池上縱谷秘境拍車（四大精準周邊地標）",
-            badge: "精準地標",
+            time: "15:15",
+            title: "池上外圍拍車地標 ①：池上萬安磚窯廠 ＆ 伯朗大道入口牌坊",
+            badge: "全柏油縱谷大片",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
             locationQuery: "池上萬安磚窯廠",
-            secondaryQuery: "大坡池風景區停車場",
-            secondaryLabel: "導航：大坡池停車場",
-            description: "避開管制區，直接導航以下 4 個周邊絕美地標拍出中央山脈雲瀑與田園大道大片：①「池上萬安磚窯廠」、②「池上伯朗大道入口 / 保安宮（池上萬安）」、③「大坡池風景區停車場」、④「池上鄉農會觀光工廠（金色豐收館）」。",
-            photoTip: "15:30–16:45 夕陽斜射中央山脈雲瀑，在萬安磚窯廠外圍與大坡池環湖步道都能拍出無人干擾的電影感跑車側身照。",
-            historyOrActivity: "萬安磚窯廠建於 1954 年，是花東縱谷保存最完整的傳統目仔窯建築，見證早年池上建築發展史；大坡池則為斷層池形成的天然內陸濕地，也是秀姑巒溪源頭之一，傍晚時分湖面倒映海岸山脈雲彩極為迷人。",
+            secondaryQuery: "池上伯朗大道入口",
+            secondaryLabel: "地標②：伯朗大道入口牌坊",
+            description: "導航至「池上萬安磚窯廠」（197縣道約2.5K）及「伯朗大道入口牌坊外圍（保安宮前）」，在合法無管制的寬敞柏油路肩拍下愛車與中央山脈雲瀑合影。",
+            photoTip: "拍完後請原路折返接回台9線，切勿繼續沿 197 縣道往南開（南段為碎石越野路）。",
+            historyOrActivity: "建於 1954 年的萬安磚窯廠為傳統「目仔窯」建築，見證早期花東縱谷紅磚建築發展史；前方的錦新三號道路（伯朗大道）因無電線桿遮擋視野、筆直通往中央山脈，因廣告取景而聲名大噪。",
             igPhoto: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "池上縱谷大道與中央山脈雲瀑 · @chishang_taitung",
-            igUrl: "https://www.instagram.com/explore/tags/池上伯朗大道/",
-            igTag: "#池上伯朗大道"
+            igCaption: "花東縱谷無電線桿筆直大道與中央山脈雲瀑 · @chishang_road",
+            igUrl: "https://www.instagram.com/explore/tags/伯朗大道/",
+            igTag: "#伯朗大道"
           },
           {
-            time: "16:30",
-            title: "池上在地點心：大池豆皮店 ＆ 福原豆腐店",
-            badge: "在地美味",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
-            locationQuery: "池上大池豆皮店",
-            secondaryQuery: "池上福原豆腐店",
-            secondaryLabel: "導航：福原豆腐店",
-            description: "下午茶時段品嚐現煎金黃酥脆的柴燒豆包與外酥內嫩香豆腐，搭配濃醇無糖豆漿。",
-            photoTip: "大池豆皮店廠房內一排排懸掛晾曬的天然豆皮簾幕，在陽光灑落時極具職人手工美感。",
-            historyOrActivity: "擁有逾五十年歷史的大池豆皮店，堅持遵循古法以柴火燒煮濃豆漿、手工撈起一張張天然豆皮晾曬，現場香煎後外皮微焦酥脆、內層軟嫩豆香四溢，是池上最具代表性的職人美食。",
-            igPhoto: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "手工柴燒香煎豆包與濃醇豆漿 · @chishang_snacks",
-            igUrl: "https://www.instagram.com/explore/tags/大池豆皮店/",
-            igTag: "#大池豆皮店"
+            time: "16:15",
+            title: "池上外圍拍車地標 ②：大坡池風景區停車場 ＆ 金色豐收館",
+            badge: "湖光夕陽拍車",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "大坡池風景區停車場",
+            secondaryQuery: "池上鄉農會觀光工廠(金色豐收館)",
+            secondaryLabel: "地標④：金色豐收館",
+            description: "傍晚前往大坡池停車場與池富道路段（金色豐收館），夕陽斜射在湖面與海岸山脈上，順道在池上鎮上品嚐「大池豆皮店」或「福原豆腐店」。",
+            photoTip: "16:30 夕陽低角度金光灑在湖面與車身側面，能拍出極具溫潤質感的縱谷黃昏車照。",
+            historyOrActivity: "大坡池是花東縱谷唯一的內陸斷層池，昔日以「池上垂綸」名列台東十景，擁有豐富濕地生態；周邊的「大池豆皮店」傳承超過五十年柴燒古法，每天清晨手工製作豆皮，是池上最具代表性的職人美食。",
+            igPhoto: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "大坡池濕地湖光山色與海岸山脈倒影 · @dapo_pond",
+            igUrl: "https://www.instagram.com/explore/tags/大坡池/",
+            igTag: "#大坡池"
           },
           {
             time: "18:30",
-            title: "池上晚餐 ➔ 入住池上/關山飯店（整裝迎接栗松溫泉）",
+            title: "池上晚餐 ➔ 入住「禮物盒子青年旅館」（整裝迎接栗松溫泉）",
             badge: "住宿與整裝",
             badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
-            locationQuery: "悟饕池上飯包文化故事館",
-            secondaryQuery: "池上日暉國際渡假村",
-            secondaryLabel: "住宿參考：日暉渡假村",
-            description: "晚餐可選創意日式炸春捲「好煎炸」或「悟饕池上飯包文化故事館」。晚間入住池上或關山飯店（距離隔天南橫入口僅 10–15 分鐘），早點休息並整理野溪溫泉裝備。",
-            photoTip: "睡前確認好明天 06:30 與栗松溫泉接駁車的會合時間與地點。",
-            historyOrActivity: "池上飯包起源於 1939 年花東鐵路蒸汽火車時代，早期在月台叫賣以竹葉包裹的番薯餅與米飯，後演變為以木片盒盛裝池上冠軍米的經典鐵路便當文化。",
+            locationQuery: "禮物盒子民宿 台東縣池上鄉忠孝路89號",
+            secondaryQuery: "悟饕池上飯包文化故事館",
+            secondaryLabel: "晚餐：悟饕文化故事館",
+            description: "晚餐可選創意日式炸春捲「好煎炸」或「悟饕池上飯包文化故事館」。晚間入住位於池上忠孝路的「禮物盒子青年旅館」，距離隔天南橫入口僅約 10–15 分鐘，早點休息並整理野溪溫泉裝備。",
+            photoTip: "睡前確認好明天 06:30 與栗松溫泉接駁車在禮物盒子青旅門口的會合時間。",
+            historyOrActivity: "池上飯包起源於 1939 年花東鐵路蒸汽火車時代，早期在月台叫賣以竹葉包裹的番薯餅與米飯，後演變為以木片盒盛裝池上冠軍米的經典鐵路便當文化；入住忠孝路上的禮物盒子青旅更能深入感受池上慢活小鎮的夜晚寧靜。",
             igPhoto: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "池上冠軍米木片便當文化體驗 · @chishang_bento",
-            igUrl: "https://www.instagram.com/explore/tags/池上便當/",
-            igTag: "#池上便當"
+            igCaption: "池上冠軍米便當文化與溫馨青旅休憩 · @chishang_stay",
+            igUrl: "https://www.instagram.com/explore/tags/禮物盒子青年旅館/",
+            igTag: "#禮物盒子青年旅館"
           }
         ],
         nearbyExtensions: [
           {
-            name: "池上好煎炸（創意日式炸春捲）",
-            category: "IG 熱門晚餐",
-            desc: "將池上米與在地食材包進酥脆炸春捲的文青小店，在池上 IG 圈評價極高。",
-            query: "池上好煎炸"
+            name: "池上｜福原豆腐店 ＆ 大池豆皮店",
+            category: "IG 必吃下午茶",
+            desc: "池上兩大排隊職人豆製品名店，外酥內嫩的香豆腐與柴燒現煎豆包搭配無糖豆漿極為驚豔。",
+            query: "福原豆腐店"
+          },
+          {
+            name: "池上｜好煎炸（日式炸春捲）",
+            category: "IG 創意美食",
+            desc: "將池上米與在地食材包入酥脆春捲皮現炸，店面文青好拍，很適合作為池上晚餐選擇。",
+            query: "好煎炸"
+          },
+          {
+            name: "鹿野高台（台9線縱谷順遊）",
+            category: "順遊大景",
+            desc: "從台東市北上池上途中會經過鹿野，高台大草皮視野開闊，可俯瞰整個卑南溪谷與棋盤狀農田。",
+            query: "鹿野高台"
           },
           {
             name: "關山米國學校（台9線旁）",
-            category: "順遊休息站",
-            desc: "位於台9線關山段大馬路旁，擁有彩繪米倉與農產展售中心，適合縱谷北上途中小憩。",
-            query: "關山米國學校"
-          },
-          {
-            name: "鹿野高台",
-            category: "俯瞰縱谷大景",
-            desc: "高台大草皮與山頂觀景台視野極佳，能 360 度俯瞰整個花東縱谷棋盤稻田與卑南溪谷。",
-            query: "台東鹿野高台"
-          },
-          {
-            name: "池上吉本肉圓",
-            category: "在地老店",
-            desc: "池上街上深受在地人喜愛的肉圓與四神湯老店，就在中山路大馬路旁。",
-            query: "池上吉本肉圓"
+            category: "順遊休憩",
+            desc: "位於台9線關山段旁，彩繪穀倉建築與超大平面停車場，適合中途伸展買伴手禮。",
+            query: "關山鎮農會休閒旅遊中心米國學校"
           }
         ]
       },
 
       day4: {
         dayLabel: "DAY 4 · 12/7（週一）",
-        title: "南橫秘境「栗松溫泉」➔ 玉長公路 ➔ 石梯坪 ➔ 牛山呼庭 ➔ 花蓮",
-        subtitle: "週一平日避開週末人潮，上午專心攻克台灣最美野溪溫泉；下午走玉長公路切入台11線海線北上，收集石梯坪與牛山呼庭海岸風光。",
+        title: "南橫秘境「栗松溫泉」朝聖 ➔ 玉長公路 ➔ 台11線海線 ＆ 牛山呼庭",
+        subtitle: "週一平日避開人潮獨享全台最美翡翠綠野溪溫泉！下午走台30線玉長公路切入台11線太平洋海線北上，造訪石梯坪與牛山呼庭。",
         stats: [
           { label: "預估里程", value: "約 165 km（不含接駁）" },
           { label: "純車程時間", value: "約 3 小時 10 分" },
-          { label: "當晚住宿區", value: "花蓮市區飯店" }
+          { label: "當晚住宿（已確認）", value: "七星潭渡假飯店" }
         ],
+        accommodation: {
+          status: "confirmed",
+          statusLabel: "已確認預訂",
+          name: "七星潭渡假飯店",
+          address: "971花蓮縣新城鄉大漢村明潭街10號",
+          description: "緊鄰七星潭月牙灣海岸線，充滿地中海海洋度假風情，提供免費腳踏車與豐富早餐。最大優勢：距離 Day 5 清晨 06:00 的日出縮時機位「七星潭泊區旁停車場」僅約 2–3 分鐘車程，拍完日出即可輕鬆回飯店享用早餐與補眠！",
+          mapQuery: "七星潭渡假飯店 花蓮縣新城鄉明潭街10號",
+          igUrl: "https://www.instagram.com/explore/tags/七星潭渡假飯店/",
+          igTag: "#七星潭渡假飯店"
+        },
         alertBanner: {
           type: "gold",
-          title: "Day 4 行程亮點：上午野溪溫泉秘境 ＋ 下午台11線海線雙地標",
-          text: "週一早上前往栗松溫泉可完美避開週末人潮，拍攝最純淨無人的翡翠綠岩壁；下午經玉長公路接台11線一路收集石梯坪與牛山呼庭海岸藝術。"
+          title: "本日兩大行程重點：栗松溫泉接駁 ＆ 牛山呼庭進出動線",
+          text: "1. 栗松溫泉：請搭乘預約之 4x4 接駁車進出登山口，愛車安全留在池上禮物盒子青旅周邊。\n2. 牛山呼庭（營業至 18:00）：從台11線轉入的聯外小路為陡窄髮夾彎下坡道，建議可於台11線入口處安全臨停步行下切約 10–15 分鐘，若開車下去務必採極低速大角度斜切。"
         },
         timeline: [
           {
             time: "06:30",
-            title: "池上/關山出發 ➔ 搭乘接駁車進入南橫公路",
-            badge: "秘境啟程",
-            badgeColor: "bg-rose-500/20 text-rose-300 border border-rose-500/40",
-            locationQuery: "台東栗松溫泉",
-            description: "預約池上／關山／利稻當地的野溪溫泉接駁車從飯店出發，沿台20線南橫公路東段蜿蜒上山，前往摩天登山口。",
-            photoTip: "清晨南橫山谷常有雲海與嵐霧繚繞，沿途霧鹿峽谷峭壁極為壯觀。",
-            historyOrActivity: "台20線南部橫貫公路於 1972 年通車，沿途穿越布農族傳統領域（初來、霧鹿、利稻部落），不僅擁有鬼斧神工的霧鹿峽谷大斷崖，更蘊藏著豐富的深層地熱溫泉資源。",
-            igPhoto: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "南橫高山雲海與峽谷地貌 · @southern_cross_highway",
-            igUrl: "https://www.instagram.com/explore/tags/南橫公路/",
-            igTag: "#南橫公路"
-          },
-          {
-            time: "07:45",
-            title: "栗松溫泉秘境野溪溫泉朝聖（含下切、泡湯與回程攀升）",
-            badge: "野溪秘境",
+            title: "池上出發上南橫 ➔ 07:45 抵達「栗松溫泉」登山口下切",
+            badge: "本日核心秘境",
             badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
-            locationQuery: "台東栗松溫泉",
-            description: "單程下切山徑約 40–60 分鐘（後段需拉繩攀爬大石壁與涉水渡溪），抵達被譽為台灣最美的翡翠綠礦物結晶岩壁野溪溫泉！12 月初微涼天氣泡在熱呼呼的溪谷溫泉裡極度享受，約 11:00 起登返回登山口。",
-            photoTip: "週一早上人潮稀少，極易拍到無人的翡翠綠岩壁與溫泉蒸汽大片！記得使用防水袋保護手機／相機。",
-            historyOrActivity: "栗松溫泉位於新武呂溪支流峽谷（海拔約 1,075 公尺），屬於弱鹼性碳酸氫鈉泉，水溫約 45–65°C。山壁上猶如翡翠瀑布般的翠綠色澤，是由富含礦物質的溫泉水與耐高溫的「嗜熱菌（溫泉藻）」長期附著結晶所形成，被譽為台灣最美野溪溫泉。",
-            igPhoto: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "翡翠綠礦物結晶岩壁野溪秘境 · @lisong_hotspring",
+            locationQuery: "栗松溫泉",
+            description: "搭乘 4x4 接駁車沿台20線南橫公路上山，07:45 整裝下切溪谷（單程約 40–60 分鐘，需拉繩攀爬大石壁與涉水渡溪），08:45 抵達絕美翡翠綠溫泉岩壁。",
+            photoTip: "週一早上人少，能拍到無人的翠綠碳酸鈣結晶岩壁與溪谷蒸氣大片，務必使用防水袋保護手機與相機。",
+            historyOrActivity: "栗松溫泉位於海拔約 1,075 公尺的新武呂溪支流峽谷，為未經人工開發的天然野溪溫泉；因高溫泉水夾帶碳酸鈣結晶與嗜熱翠綠色藻類長年附著於山壁，形成宛如翡翠瀑布般的奇景，被譽為「台灣最美野溪溫泉」。",
+            igPhoto: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "南橫峽谷翡翠綠礦物結晶野溪溫泉秘境 · @lisong_hotspring",
             igUrl: "https://www.instagram.com/explore/tags/栗松溫泉/",
             igTag: "#栗松溫泉"
           },
           {
+            time: "11:00",
+            title: "野溪溫泉起登返回登山口 ➔ 搭接駁車下山",
+            badge: "體力攀升",
+            badgeColor: "bg-slate-700 text-slate-200",
+            locationQuery: "栗松溫泉登山口",
+            description: "泡完暖呼呼的野溪溫泉後，11:00 準時起登返回登山口（回程全程上坡較耗體力，慢慢調整呼吸攀爬即可），約 12:15 回到登山口搭車下山。",
+            photoTip: "登山口備有乾毛巾與保暖外套，避免吹風著涼。",
+            historyOrActivity: "回程沿途可欣賞南橫中海拔針闊葉混合林相與新武呂溪深邃峽谷地形，體驗台灣高山溪谷原始地貌魅力。",
+            igPhoto: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "南橫高山雲霧與原始森林步道風景 · @southern_cross_island",
+            igUrl: "https://www.instagram.com/explore/tags/南橫公路/",
+            igTag: "#南橫公路"
+          },
+          {
             time: "13:15",
-            title: "返回池上/關山飯店梳洗並享用午餐",
+            title: "返回池上「禮物盒子青年旅館」梳洗整裝並享用午餐",
             badge: "整裝補給",
             badgeColor: "bg-slate-700 text-slate-200",
-            locationQuery: "池上鄉",
-            description: "搭接駁車回到飯店沖洗換上乾爽衣物，簡單享用午餐補充體力後，正式開啟下午的太平洋海線北上之旅。",
+            locationQuery: "禮物盒子民宿 台東縣池上鄉忠孝路89號",
+            description: "搭接駁車回到池上換上乾爽衣物，簡單享用午餐補充體力後，正式開啟下午的太平洋海線北上之旅。",
             photoTip: "整理好野溪溫泉器材，準備迎接下午台11線蔚藍海岸。",
-            historyOrActivity: "完成高強度的峽谷攀爬與野溪泡湯後，在縱谷小鎮享用熱騰騰的午餐並稍作休整，為午後的海岸巡航補足能量。",
+            historyOrActivity: "完成高強度的峽谷攀爬與野溪泡湯後，在池上小鎮享用熱騰騰的午餐並稍作休整，為午後的海岸巡航補足能量。",
             igPhoto: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80",
             igCaption: "縱谷小鎮午餐補給時刻 · @taitung_lunch",
             igUrl: "https://www.instagram.com/explore/tags/池上美食/",
@@ -633,104 +672,102 @@
           },
           {
             time: "14:15",
-            title: "台9線接「台30線玉長公路」➔ 切入台11線海線北上",
-            badge: "山海穿越",
-            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
-            locationQuery: "玉長公路",
-            description: "從玉里轉接台30線玉長公路橫越海岸山脈，穿過玉長隧道瞬間太平洋在眼前展開，隨即左轉台11線一路向北。",
-            photoTip: "玉長公路彎道流暢、視野開闊，出隧道後俯瞰太平洋的景色極為震撼。",
-            historyOrActivity: "玉長公路全長 16.22 公里，是唯一以隧道方式穿越海岸山脈的公路（玉長隧道長 2,660 公尺），將花東縱谷與東海岸的車程大幅縮短至 30 分鐘內，體驗「前山看田園、後山看大海」的地理奇觀。",
-            igPhoto: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "穿越海岸山脈迎向無邊際太平洋 · @hualien_coast",
-            igUrl: "https://www.instagram.com/explore/tags/玉長公路/",
-            igTag: "#玉長公路"
-          },
-          {
-            time: "15:15",
-            title: "豐濱「石梯坪」白色單面山拍車",
-            badge: "拍車聖地",
+            title: "台30線玉長公路 ➔ 豐濱「石梯坪」海岸線拍車",
+            badge: "山海雙享受",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
-            locationQuery: "花蓮石梯坪",
-            description: "抵達台11線最具辨識度的地標「石梯坪」，壯觀的白色單面山與世界級海蝕平台緊鄰海岸。",
-            photoTip: "低角度取景能讓跑車車身線條與白色凝灰岩、太平洋浪花形成強烈視覺對比，亦可走上單面山步道俯瞰海蝕壺穴。",
-            historyOrActivity: "清代統領吳光亮率兵開路時，見此處海岸岩石呈階梯狀層層入海，遂命名為「石梯」。園區擁有極為發達的海蝕平台、隆起珊瑚礁、海蝕溝與壺穴地質景觀，是東海岸最知名的戶外地質教室與賞鯨發源地。",
-            igPhoto: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "石梯坪白色單面山與太平洋海蝕平台 · @shitiping",
+            locationQuery: "石梯坪",
+            secondaryQuery: "玉長公路",
+            secondaryLabel: "路線：台30線玉長公路",
+            description: "走玉長公路橫越海岸山脈切至太平洋海線，沿台11線北上抵達豐濱「石梯坪」，在白色單面山與世界級海蝕平台旁幫愛車拍下海線大片。",
+            photoTip: "石梯坪園區內停車場緊鄰白色海岸岩石與浪花，低角度拍攝車身線條張力十足。",
+            historyOrActivity: "台30線玉長公路於 2007 年通車，全長 2,660 公尺的玉長隧道打通了花東縱谷與東海岸的交通任督二脈；出口處的「石梯坪」則因陸地隆起與海浪侵蝕，形成階梯狀海蝕平台、壺穴與白色凝灰岩單面山等世界級地質教室。",
+            igPhoto: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "石梯坪白色單面山海蝕平台與太平洋浪花 · @shitiping_hualien",
             igUrl: "https://www.instagram.com/explore/tags/石梯坪/",
             igTag: "#石梯坪"
           },
           {
             time: "16:15",
-            title: "水璉「牛山呼庭」漂流木藝術與秘境海灘（營業至 18:00）",
-            badge: "海岸秘境",
-            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
-            locationQuery: "花蓮牛山呼庭",
-            description: "沿台11線北上至水璉路段，造訪充滿漂流木裝置藝術、大草皮與月牙海灘的牛山呼庭，喝杯飲料吹海風（門票可折抵消費）。",
-            photoTip: "16:15–17:30 的黃昏柔和光線灑在草皮、白色鐘樓與漂流木建築上極具文青電影感，亦是周杰倫《千里之外》MV 取景地。",
-            historyOrActivity: "「呼庭（Huting）」在阿美族語中意為「放牧牛群的草地」，昔日水璉部落族人在此牧牛耕作。園區主人耗費數十年收集颱風過後的漂流木，親手雕刻創作出充滿原住民神話與自然靈性的大型木雕藝術，結合換膚海灘成為台11線最浪漫的秘境。",
-            igPhoto: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "漂流木藝術草皮與水璉月牙海灣 · @niushan_huting",
+            title: "水璉「牛山呼庭」漂流木藝術與秘境海灘下午茶",
+            badge: "秘境海岸",
+            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            locationQuery: "牛山呼庭",
+            description: "繼續沿台11線北上至水璉路段造訪牛山呼庭（每日開放至 18:00，入園費可折抵飲品），欣賞原住民漂流木雕刻藝術、大片草坡與換膚海灘。",
+            photoTip: "從草坡高處俯瞰海灣與漂流木裝置藝術非常有秘境度假感。",
+            historyOrActivity: "「呼庭（Huting）」在阿美族語中意指放牧牛群的草地，牛山呼庭園區內充滿阿美族藝術家以漂流木創作的圖騰與雕塑，並曾作為好萊塢電影《沉默》取景地，是東海岸極具靈氣的藝術秘境。",
+            igPhoto: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "水璉牛山呼庭綠意草坡與秘境海灘 · @niushan_huting",
             igUrl: "https://www.instagram.com/explore/tags/牛山呼庭/",
             igTag: "#牛山呼庭"
           },
           {
             time: "18:15",
-            title: "抵達花蓮市區飯店 ➔ 花蓮晚餐（王記茶舖 / 耕壽司 / 東大門夜市）",
+            title: "入住「七星潭渡假飯店」 ➔ 花蓮晚餐（王記茶舖 / 耕壽司 / 東大門夜市）",
             badge: "美食與住宿",
             badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
-            locationQuery: "花蓮王記茶舖人文茶堂中山店",
-            secondaryQuery: "花蓮東大門夜市",
-            secondaryLabel: "備案：東大門夜市",
-            description: "入住花蓮市區飯店後，晚餐推薦在地人最愛的「王記茶舖（中山店）」、高人氣炙燒握壽司「耕壽司」或規劃整齊寬敞的「東大門夜市」。",
-            photoTip: "睡前確認相機腳架與電池已備妥，明天早上 05:50 準時出發七星潭錄製日出縮時！",
-            historyOrActivity: "王記茶舖被花蓮在地人譽為「花蓮人的春水堂」，古色古香的庭園造景搭配真材實料的中式簡餐與珍珠奶茶；東大門夜市則整合福町、原住民一條街等四大區域，可一次品嚐林記燒番麥與第一家烤肉串。",
+            locationQuery: "七星潭渡假飯店 花蓮縣新城鄉明潭街10號",
+            secondaryQuery: "花蓮王記茶舖人文茶堂中山店",
+            secondaryLabel: "晚餐：王記茶舖",
+            description: "前往七星潭畔辦理入住「七星潭渡假飯店」，隨後進花蓮市區享用晚餐（推薦在地人最愛的「王記茶舖」、高人氣「耕壽司」或「東大門夜市」）。",
+            photoTip: "飯店距離明天日出機位「七星潭泊區旁停車場」僅 2–3 分鐘車程！睡前確認相機腳架與電池已備妥，明天早上 05:55 出發即可。",
+            historyOrActivity: "七星潭渡假飯店以藍白相間的地中海建築風格坐落於七星潭海岸旁，步行 1 分鐘即達月牙灣海灘；晚餐推薦的王記茶舖則被譽為「花蓮人的春水堂」，古色古香庭園造景搭配精緻簡餐極具特色。",
             igPhoto: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "花蓮在地經典茶館與夜市美食饗宴 · @hualien_food",
-            igUrl: "https://www.instagram.com/explore/tags/花蓮美食/",
-            igTag: "#花蓮美食"
+            igCaption: "七星潭海景度假飯店與花蓮經典美食 · @qixingtan_hotel",
+            igUrl: "https://www.instagram.com/explore/tags/七星潭渡假飯店/",
+            igTag: "#七星潭渡假飯店"
           }
         ],
         nearbyExtensions: [
           {
-            name: "項鍊海岸工作室（石梯坪旁）",
-            category: "海景月牙鞦韆咖啡",
-            desc: "就在石梯坪北側旁，擁有面對太平洋的夢幻月牙形鞦韆與原住民風味海景咖啡，IG 打卡超熱門。",
-            query: "花蓮項鍊海岸工作室"
+            name: "豐濱｜項鍊海岸工作室（月牙鞦韆）",
+            category: "IG 網美海景咖啡",
+            desc: "就在石梯坪旁，以阿美族神話打造的月牙型海景鞦韆是 IG 爆紅打卡點，適合喝杯海風咖啡。",
+            query: "項鍊海岸工作室"
           },
           {
-            name: "大石鼻山步道（磯崎海灣）",
-            category: "360度海景木棧道",
-            desc: "位於石梯坪與牛山呼庭之間，僅需步行 15 分鐘登上木棧道制高點，即可俯瞰整片磯崎海灣與台11線海岸公路。",
-            query: "大石鼻山步道"
+            name: "豐濱｜大石鼻山休憩區",
+            category: "海灣休息站",
+            desc: "台11線磯崎海灣旁，有平坦公廁停車場與俯瞰整片海灣的木棧道。",
+            query: "大石鼻山休憩區停車場"
           },
           {
-            name: "瑞穗北回歸線標誌公園（縱谷備案）",
-            category: "地標打卡",
-            desc: "若當天午後山區起霧改走台9線縱谷北上，瑞穗北回歸線公園設有純白日晷地標與廣闊草皮。",
-            query: "瑞穗北回歸線標誌公園"
+            name: "花蓮市｜東大門夜市",
+            category: "晚餐備案",
+            desc: "規劃整齊寬敞的觀光夜市，推薦第一家烤肉串、林記燒番麥與福町本舖檸檬汁。",
+            query: "花蓮東大門夜市"
           },
           {
-            name: "花蓮觀光糖廠（光復糖廠）",
-            category: "休憩吃冰",
-            desc: "同樣位於台9線縱谷線上的日式木造宿舍群與經典吃冰休憩點。",
-            query: "花蓮觀光糖廠"
+            name: "花蓮市｜耕壽司（花蓮總店）",
+            category: "高人氣日料",
+            desc: "花蓮超高人氣炙燒握壽司與海鮮丼專賣店，份量十足且價格實惠。",
+            query: "耕壽司 花蓮總店"
           }
         ]
       },
 
       day5: {
         dayLabel: "DAY 5 · 12/8（週二）",
-        title: "七星潭泊區日出縮時 ➔ 蘇花改 ➔ 宜蘭午餐 ➔ 不厭亭壓軸返北",
-        subtitle: "清晨 06:00 在七星潭泊區第一排錄製「跑車日行燈＋太平洋日出」縮時大片；回飯店補眠早餐後北上，登上 102 縣道不厭亭拍下環島最終章。",
+        title: "七星潭泊區日出縮時 ➔ 清水斷崖 ➔ 蘇花改 ➔ 不厭亭返南港",
+        subtitle: "清晨 06:00 在七星潭泊區第一排海景錄製「藍調時刻＋跑車日行燈＋太平洋日出」縮時大片，回飯店吃完早餐補眠後，一路沿蘇花山海與 102 縣道寂寞公路返回南港！",
         stats: [
           { label: "預估里程", value: "約 215 km" },
           { label: "純車程時間", value: "約 3 小時 30 分" },
-          { label: "預計返抵時間", value: "16:30 平安返抵台北南港" }
+          { label: "退房飯店（已確認）", value: "七星潭渡假飯店" }
         ],
+        accommodation: {
+          status: "checkout",
+          statusLabel: "當日退房飯店",
+          name: "七星潭渡假飯店（早晨日出基地 ＆ 退房）",
+          address: "971花蓮縣新城鄉大漢村明潭街10號",
+          description: "因飯店緊鄰七星潭海岸，清晨 05:55 出門僅需 2–3 分鐘車程即達「七星潭泊區旁停車場」拍攝日出縮時；07:05 拍完後可直接回飯店享用豐盛早餐並補眠至 09:30 再從容退房北上！",
+          mapQuery: "七星潭渡假飯店 花蓮縣新城鄉明潭街10號",
+          igUrl: "https://www.instagram.com/explore/tags/七星潭渡假飯店/",
+          igTag: "#七星潭渡假飯店"
+        },
         alertBanner: {
           type: "gold",
           title: "12/8 七星潭日出縮時黃金時間表（日出約 06:28）",
-          text: "05:50 飯店出發 ➔ 06:00 抵達「七星潭泊區旁停車場」最靠海側邊緣 ➔ 06:05 藍調時刻開啟跑車日行燈並啟動縮時（間隔 2–3 秒）➔ 07:05 收工回飯店享用早餐！"
+          text: "05:55 七星潭渡假飯店出發 ➔ 06:00 抵達「七星潭泊區旁停車場」最靠海側邊緣 ➔ 06:05 藍調時刻開啟跑車日行燈並啟動縮時（間隔 2–3 秒）➔ 07:05 收工回七星潭渡假飯店享用早餐！"
         },
         timeline: [
           {
@@ -739,7 +776,7 @@
             badge: "日出縮時大片",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
             locationQuery: "七星潭泊區旁停車場",
-            description: "距離花蓮市區僅 10 分鐘車程！將愛車停在停車場「最靠海側邊緣位置」，車頭朝東北方（太平洋與遠方清水斷崖山壁），腳架架在車側後方 3–5 公尺處錄製 30 分鐘完整日出縮時。",
+            description: "從七星潭渡假飯店出發僅 2–3 分鐘車程！將愛車停在停車場「最靠海側邊緣位置」，車頭朝東北方（太平洋與遠方清水斷崖山壁），腳架架在車側後方 3–5 公尺處錄製 30 分鐘完整日出縮時。",
             photoTip: "🎬 縮時參數：間隔設定 2–3 秒拍一張、鎖定手動對焦（MF）與白平衡；06:05–06:25 藍調時刻開啟愛車日行燈，看著太陽從海平面升起將車身烤漆染成金黃色！",
             historyOrActivity: "七星潭並非湖泊，而是由立霧溪與美崙溪沖積而成的優美弧形月牙灣，海岸鋪滿圓潤的藍灰色礫石。「泊區」一帶則是花蓮百年「定置漁場」作業基地，清晨時分常見漁船滿載漁獲歸來，與太平洋第一道曙光交織出充滿生命力的港灣晨景。",
             igPhoto: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
@@ -749,161 +786,145 @@
           },
           {
             time: "07:15",
-            title: "返回花蓮飯店享用早餐、小睡補眠與整理退房",
+            title: "返回「七星潭渡假飯店」享用早餐、小睡補眠與整理退房",
             badge: "悠閒休憩",
             badgeColor: "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40",
-            locationQuery: "花蓮市區",
-            description: "拍完日出大片後時間還非常早，從容回飯店吃頓豐盛早餐、補眠休息，09:30 再退房北上。",
+            locationQuery: "七星潭渡假飯店 花蓮縣新城鄉明潭街10號",
+            description: "拍完日出大片後僅需 2 分鐘即回到七星潭渡假飯店，從容享用豐盛早餐、補眠休息，09:30 再辦理退房北上。",
             photoTip: "趁早餐時間將剛拍好的日出縮時素材匯入手機預覽，成就感滿分！",
-            historyOrActivity: "在花蓮市區飯店悠閒享用在地早餐（如公正包子、廟口紅茶或飯店自助百匯），並小憩片刻養足精神，為最後一天的北返山海公路做好準備。",
+            historyOrActivity: "在充滿地中海風情的七星潭渡假飯店餐廳享用現做中西式早餐與咖啡，亦可借用飯店免費腳踏車沿七星潭濱海自行車道吹海風，養足精神為最後一天的北返山海公路做好準備。",
             igPhoto: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "晨光日出後的悠閒咖啡與早餐時光 · @hualien_morning",
-            igUrl: "https://www.instagram.com/explore/tags/花蓮早餐/",
-            igTag: "#花蓮早餐"
+            igCaption: "晨光日出後的悠閒海景早餐時光 · @qixingtan_resort",
+            igUrl: "https://www.instagram.com/explore/tags/七星潭渡假飯店/",
+            igTag: "#七星潭渡假飯店"
           },
           {
-            time: "09:30",
-            title: "正式北上啟程 ➔ 清水斷崖（匯德休憩區）順光海景",
-            badge: "山海巡航",
-            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
+            time: "10:00",
+            title: "清水斷崖（匯德休憩區）順光海景 ➔ 台9線蘇花改北上",
+            badge: "世界級斷崖",
+            badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
             locationQuery: "匯德休憩區",
-            description: "沿台9線北上進入蘇花路段，上午順光時段的清水斷崖海水呈現最清澈的漸層牛奶藍與寶石藍，於匯德休憩區短暫停靠欣賞斷崖美景後，經蘇花改一路北上宜蘭。",
-            photoTip: "匯德休憩區觀景步道靠近海側護欄可直接俯瞰垂直落入太平洋的斷崖絕壁與漸層海水。",
-            historyOrActivity: "清水斷崖綿延約 21 公里，由大理岩、片麻岩與綠色片岩構成，幾乎以 90 度直角垂直插入太平洋，是台灣八大景之一。匯德休憩區旁保存著舊蘇花公路臨海步道，能近距離感受太平洋拍擊峭壁的磅礡氣勢。",
+            secondaryQuery: "清水斷崖",
+            secondaryLabel: "地標：清水斷崖",
+            description: "上午 10 點陽光直射斷崖下的太平洋，海水呈現夢幻的漸層牛奶藍與土耳其藍！停靠匯德休憩區拍完照後，經蘇花改一路平穩北上進入宜蘭。",
+            photoTip: "將跑車停靠在匯德休憩區海側第一排車格，能輕鬆拍出懸崖峭壁與漸層藍海同框照。",
+            historyOrActivity: "清水斷崖是台灣八景之一，高逾 1,000 公尺的片麻岩與大理岩峭壁幾乎以 90 度垂直插入太平洋；蘇花公路前身為清代「北路（奇萊道）」與日治時期臨海道路，歷經百年演進成為今日安全平整的蘇花改。",
             igPhoto: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "清水斷崖垂直絕壁與漸層牛奶藍太平洋 · @qingshui_cliff",
+            igCaption: "清水斷崖峭壁下夢幻牛奶藍漸層太平洋 · @qingshui_cliff",
             igUrl: "https://www.instagram.com/explore/tags/清水斷崖/",
             igTag: "#清水斷崖"
           },
           {
             time: "11:45",
-            title: "宜蘭午餐與中繼休憩（礁溪 / 頭城）",
-            badge: "必吃美食",
-            badgeColor: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
-            locationQuery: "礁溪龍潭湖畔悠活園區",
-            secondaryQuery: "頭城滿山望海",
-            secondaryLabel: "海景咖啡：滿山望海",
-            description: "中午抵達宜蘭，可前往純白貨櫃建築群與湖景環繞的「礁溪龍潭湖畔悠活園區」，或品嚐「正常鮮肉小籠湯包」、「樂山溫泉拉麵」，若想看龜山島海景也可預約頭城「滿山望海」。",
-            photoTip: "龍潭湖畔悠活園區純白建築群倒映在湖畔綠地上非常乾淨好拍；滿山望海二樓露台則能與龜山島海景同框。",
-            historyOrActivity: "龍潭湖古稱「大埤湖」，是蘭陽五大名湖中面積最大、保存最完整的天然湖泊，三面環山景緻清幽；園區內由台塑生醫打造的純白貨櫃建築群結合環湖步道，適合餐後散步舒展筋骨。",
+            title: "宜蘭午餐時間：礁溪 / 頭城美食或海景咖啡廳",
+            badge: "蘭陽美食補給",
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
+            locationQuery: "龍潭湖畔悠活園區",
+            secondaryQuery: "滿山望海",
+            secondaryLabel: "備案：滿山望海",
+            description: "通過蘇花改進入宜蘭，可選擇前往純白貨櫃建築「龍潭湖畔悠活園區」、面對龜山島的ガラス屋「滿山望海」，或在礁溪品嚐鮮肉小籠湯包與溫泉拉麵。",
+            photoTip: "龍潭湖畔悠活園區擁有純白貨櫃建築群與湖景，也很適合順手拍車。",
+            historyOrActivity: "礁溪溫泉是台灣少見的平地碳酸氫鈉泉（美人湯），自清代起便有「湯圍溫泉」美名；頭城則是「開蘭第一城」，海岸線正對外型宛如浮龜的火山島「龜山島」，午間在海岸咖啡廳遠眺龜山島極為療癒。",
             igPhoto: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "宜蘭純白玻璃屋與龜山島海景午後 · @yilan_cafe",
+            igCaption: "頭城海岸純白玻璃屋遠眺龜山島海景 · @yilan_cafe",
             igUrl: "https://www.instagram.com/explore/tags/滿山望海/",
             igTag: "#滿山望海"
           },
           {
-            time: "13:45",
-            title: "台2線濱海公路北上 ➔ 雙溪切入「102 縣道瑞雙公路」",
-            badge: "經典山道",
-            badgeColor: "bg-cobalt/20 text-cobalt border border-cobalt/40",
-            locationQuery: "雙溪102縣道",
-            description: "不走雪隧回台北！改走台2線東北角濱海公路吹海風，至福隆／雙溪轉入北部車友最愛的 102 縣道瑞雙公路一路爬升。",
-            photoTip: "週二平日下午 102 縣道車流極少，彎道流暢視野極佳，沿途可遠眺貢寮與雙溪山谷聚落。",
-            historyOrActivity: "102 縣道（瑞雙公路）早期是連接瑞芳九份金礦區與雙溪山城的重要運輸山道，沿途保留礦業時期的古樸山城風貌，隨著高度攀升，視野從翠綠山谷一路開展至東北角海岸線。",
-            igPhoto: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "蜿蜒爬升於東北角山稜的經典山道 · @ruifang_102",
-            igUrl: "https://www.instagram.com/explore/tags/瑞雙公路/",
-            igTag: "#瑞雙公路"
-          },
-          {
             time: "14:45",
-            title: "登上「不厭亭」：12 月滿山芒草與寂寞公路壓軸大片",
-            badge: "環島壓軸大片",
+            title: "環島壓軸神級機位：102 縣道瑞雙公路「不厭亭」",
+            badge: "寂寞公路封神照",
             badgeColor: "bg-champagne/20 text-champagne border border-champagne/40",
-            locationQuery: "瑞芳不厭亭",
-            description: "抵達 102 縣道製高點「不厭亭」，筆直的雙向公路沿著山稜線延伸，12 月初滿山銀白色芒草隨風搖曳，在此拍下五天四夜跑車環島的完美封神畢業照！",
-            photoTip: "不厭亭前方直道兩側有寬闊停靠空間，以連綿山巒與芒草公路為背景，低角度拍攝跑車車尾或車頭皆極具氣勢。",
-            historyOrActivity: "不厭亭位於雙溪區與瑞芳區交界處（102 縣道 21K），由前雙溪鄉鄉長簡華祥命名，取自李白詩句「相看兩不厭」，意指一面可遠眺雙溪鄉全貌、另一面可俯瞰瑞芳與湛藍海景，秋冬季節滿山五節芒花海更是攝影師必訪的「寂寞公路」聖地。",
-            igPhoto: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "102縣道不厭亭滿山芒草與寂寞公路大片 · @buyanting",
+            locationQuery: "不厭亭",
+            description: "離開宜蘭沿台2線濱海公路北上至雙溪，轉入 102 縣道瑞雙公路登上製高點「不厭亭」。12 月初滿山銀白色芒草隨風搖曳，筆直公路沿著山稜線延伸，是北部車友公認最經典的環島收尾聖地！",
+            photoTip: "不厭亭前方雙向道路在午後陽光斜射下會呈現金色山稜線，把車停在公路最高點安全路肩，拍出「寂寞公路」封神大片。",
+            historyOrActivity: "不厭亭位於新北雙溪與瑞芳交界（102 縣道 21K 處），名稱取自李白詩句「相看兩不厭」，一面可遠眺雙溪鄉野風光、另一面可俯瞰瑞芳與太平洋海景，每年秋冬之際滿山五節芒花海更是北台灣最經典的公路風景。",
+            igPhoto: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "102縣道寂寞公路不厭亭滿山金色芒草 · @buyanting_102",
             igUrl: "https://www.instagram.com/explore/tags/不厭亭/",
             igTag: "#不厭亭"
           },
           {
-            time: "15:30",
-            title: "下九份接台62線快速道路 ➔ 國道一號平安返回南港",
-            badge: "圓滿返家",
+            time: "16:30",
+            title: "下九份接台62線快速道路 ➔ 國道一號平安返抵南港",
+            badge: "圓滿完賽",
             badgeColor: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
-            locationQuery: "台北南港",
-            description: "拍完壓軸大片後順著 102 縣道下九份外圍（不進老街塞車），直接銜接台62線萬瑞快速道路轉國道一號，約 16:30 避開下班尖峰車潮平安返抵南港！",
-            photoTip: "五天四夜逆時針跑車環島圓滿達成，別忘了幫里程表拍張紀念照！",
-            historyOrActivity: "從東北角山城順勢下山銜接快速道路返抵台北南港，完整繞行台灣本島一圈（總里程約 1,000 公里），帶著滿滿的山海大片與婚禮祝福圓滿賦歸。",
-            igPhoto: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1000&q=80",
-            igCaption: "環島千公里圓滿達成紀念 · @taiwan_grandtour",
-            igUrl: "https://www.instagram.com/explore/tags/台灣環島/",
-            igTag: "#台灣環島"
+            locationQuery: "南港車站",
+            description: "拍完壓軸大片後順著 102 縣道下山（經過九份外圍不下老街塞車），直接銜接台62線萬瑞快速道路轉國道一號，約 16:30 避開下班車潮平安返回南港，完成五天四夜跑車環島之旅！",
+            photoTip: "回家後別忘了幫愛車做一次徹底的泡沫洗車，洗去五天來太平洋的海風鹽分。",
+            historyOrActivity: "台62線萬瑞快速公路串聯基隆瑞芳山海與中山高速公路，繞開九份山城狹窄老街車流，讓五天四夜逆時針環島之旅在順暢的駕駛節奏中圓滿落幕。",
+            igPhoto: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+            igCaption: "五天四夜逆時針環島圓滿達成！ · @taiwan_grandtour",
+            igUrl: "https://www.instagram.com/explore/tags/環島成功/",
+            igTag: "#環島成功"
           }
         ],
         nearbyExtensions: [
           {
-            name: "崇德海灘 / 崇德瑩農場外圍堤防",
-            category: "日出備案機位",
-            desc: "若早上願意早 20 分鐘（05:40）出門往北開，崇德海灘可同時拍到太平洋日出與清水斷崖山壁同框。",
-            query: "崇德海灘"
+            name: "基隆八斗子｜潮境公園（海景收尾備案）",
+            category: "海景公路備案",
+            desc: "若不想走 102 縣道山路，可一路沿台2線濱海公路開到潮境公園，以基隆嶼與海岸線為背景拍車，同樣直接接台62線返北。",
+            query: "潮境公園"
           },
           {
-            name: "基隆八斗子潮境公園",
-            category: "海線收尾備案",
-            desc: "若下午想走全海線回台北，可續走台2線至潮境公園（拍基隆嶼、飛天掃帚裝置藝術與跑車），再接台62線返南港。",
-            query: "基隆潮境公園"
+            name: "瑞芳｜南雅奇岩（台2線濱海段）",
+            category: "海岸地質景觀",
+            desc: "沿台2線北上必經的風化海蝕奇岩地標，停車場就在公路旁，適合短暫停靠拍照。",
+            query: "南雅奇岩"
           },
           {
-            name: "蘭陽博物館 ＆ 烏石港（頭城）",
-            category: "建築拍車點",
-            desc: "單面山幾何玻璃建築極具現代感，倒映在濕地水面上非常壯觀，適合作為宜蘭午餐後的順遊點。",
-            query: "宜蘭蘭陽博物館"
+            name: "頭城｜蘭陽博物館 ＆ 烏石港",
+            category: "建築美學拍車",
+            desc: "單面山幾何建築外觀與水面倒影極具設計感，周邊大型平面停車場非常好停。",
+            query: "蘭陽博物館"
           },
           {
-            name: "正常鮮肉小籠湯包（礁溪店）",
-            category: "宜蘭排隊小吃",
-            desc: "皮薄多汁的蔥香小籠湯包，週二平日中午排隊時間短，適合快速享用道地宜蘭味。",
-            query: "正常鮮肉小籠湯包礁溪店"
+            name: "礁溪｜正常鮮肉小籠湯包",
+            category: "在地排隊美食",
+            desc: "皮薄多汁的蔥香鮮肉小籠湯包，距離礁溪市區平面停車場步行僅 2 分鐘。",
+            query: "正常鮮肉小籠湯包 礁溪店"
           }
         ]
       }
     };
 
     // =========================================================================
-    // 行前檢查清單資料（跑車專屬＋日出縮時器材＋栗松野溪溫泉裝備）
+    // 行前裝備與檢查清單資料
     // =========================================================================
     const checklistCategories = [
       {
-        id: "car-care",
-        title: "🏎️ 跑車長途環島檢查與隨車小物",
-        subtitle: "確保五天山海巡航零故障、漆面隨時保持最佳上鏡狀態",
+        title: "🏎️ 長途自駕行前檢查與車用隨身包",
+        subtitle: "確保五天逾 1,000 公里山海長途巡航零失誤",
         items: [
-          { id: "c1", text: "出發前檢查四輪胎壓、胎紋深度、機油與冷卻水液位" },
-          { id: "c2", text: "檢查雨刷膠條與雨刷水（12月宜蘭與東北角易有細雨）" },
-          { id: "c3", text: "攜帶超細纖維擦車布 2–3 條 ＋ 簡易水蠟 / 細節噴霧（海邊拍車前快速去鹽分灰塵）" },
-          { id: "c4", text: "確認高流量行車記錄器 / 運動相機吸盤支架與記憶卡容量（南迴金崙大橋動態錄影用）" },
+          { id: "c1", text: "出發前檢查四輪胎壓、胎紋深度、機油與雨刷水（12月宜蘭／東北角易有陣雨）" },
+          { id: "c2", text: "準備超細纖維擦車布 2 條 ＋ 簡易水蠟／細節噴霧（每天拍車前擦掉海風鹽分與灰塵）" },
+          { id: "c3", text: "確認 eTag 儲值餘額充足，行車記錄器記憶卡已格式化並正常錄影" },
+          { id: "c4", text: "確認 12/7（週一）栗松溫泉 4x4 接駁車預約時間與池上「禮物盒子青旅」門口會合點" },
           { id: "c5", text: "車用手機快充線、12V 點菸器充電器與急救隨車打氣機" },
-          { id: "c6", text: "雙重確認所有飯店停車位與入住時間" }
+          { id: "c6", text: "確認四晚已預訂飯店（提米好旅、哈囉行旅屏東館、禮物盒子青旅、七星潭渡假飯店）入住時間與停車位置" }
         ]
       },
       {
-        id: "photo-gear",
-        title: "📸 拍車大片 ＆ 七星潭日出縮時攝影器材",
-        subtitle: "Day 5 清晨 06:00 七星潭泊區 30 分鐘日出縮時專用",
+        title: "♨️ 12/7 南橫「栗松溫泉」野溪攀爬專用裝備",
+        subtitle: "單程下切 40–60 分鐘需拉繩與涉水，安全與保暖缺一不可",
         items: [
-          { id: "p1", text: "穩固三腳架（七星潭海邊清晨微風，腳架需足夠穩重防晃動）" },
-          { id: "p2", text: "相機 / 手機滿電電池 ＋ 行動電源（低溫海邊電池消耗較快）" },
-          { id: "p3", text: "偏光鏡 CPL（消除車窗與烤漆表面多餘反光，讓南迴太平洋海水更湛藍）" },
-          { id: "p4", text: "遙控快門線或手機縮時 App 測試（設定間隔 2–3 秒、鎖定 MF 對焦與白平衡）" },
-          { id: "p5", text: "鏡頭拭鏡紙與吹球（海邊水氣與鹽霧易附著於鏡片）" }
+          { id: "l1", text: "防滑溯溪鞋或高抓地力水陸兩用鞋（溪谷青苔岩石極滑，切勿穿一般平底球鞋）" },
+          { id: "l2", text: "棉紗工作手套或防滑攀岩手套（下切與回程拉繩攀爬陡壁必備，保護雙手不被繩索磨傷）" },
+          { id: "l3", text: "防水袋（10L–20L）與手機防水套（收納換洗衣物、毛巾、飲水與拍攝器材）" },
+          { id: "l4", text: "泳衣／快乾排汗衣褲（12月山區氣溫低，避免穿純棉衣物濕掉後失溫）" },
+          { id: "l5", text: "高熱量行動糧（巧克力、能量棒、鹽糖）與 1,000ml 飲用水" },
+          { id: "l6", text: "放一套全套乾爽保暖衣物、大毛巾與塑膠袋（裝濕衣物）在接駁車或池上青旅內" }
         ]
       },
       {
-        id: "lisong-gear",
-        title: "♨️ Day 4 栗松野溪溫泉 ＆ 婚禮正式服裝",
-        subtitle: "兼顧週六正式喜宴與週一陡峭峽谷攀爬涉水",
+        title: "📸 拍車大片 ＆ 12/8 七星潭日出縮時攝影器材",
+        subtitle: "捕捉晨昏黃金光影與流暢日出縮時影片",
         items: [
-          { id: "l1", text: "提前預約池上 / 關山 / 利稻「栗松溫泉 4x4 得利卡接駁車」" },
-          { id: "l2", text: "防滑溯溪鞋或高抓地力水陸兩用鞋（溪谷石壁濕滑必備）" },
-          { id: "l3", text: "棉質工作手套 / 攀爬手套（下切與回程需拉繩攀爬大石壁）" },
-          { id: "l4", text: "15L–20L 防水袋（裝手機、相機、毛巾、乾衣物與行動糧）" },
-          { id: "l5", text: "泳衣褲、速乾毛巾、保暖防風外套（12月溪谷泡湯起身時溫差大）" },
-          { id: "l6", text: "後車廂大型防水置物箱 / 塑膠袋（收納泡湯後的濕裝備，保持車室乾爽）" },
-          { id: "l7", text: "Day 2（12/5）彰化唯愛庭園婚禮正式服裝與紅包禮金" }
+          { id: "p1", text: "穩固三腳架（12/8 清晨七星潭海邊風大，腳架務必穩固或掛重物防晃動）" },
+          { id: "p2", text: "偏光鏡（CPL 濾鏡，可消除車窗與烤漆反光，讓海水與天空更湛藍通透）" },
+          { id: "p3", text: "相機／手機滿電電池 ＋ 大容量行動電源（低溫環境與 30 分鐘連續縮時較耗電）" },
+          { id: "p4", text: "車內吸盤／夾具支架（錄製 Day 3 金崙大橋與 Day 5 蘇花／102縣道動態視角）" },
+          { id: "p5", text: "婚禮正式／半正式服裝與皮鞋（Day 2 11:30 彰化唯愛庭園喜宴穿搭）" }
         ]
       }
     ];
@@ -912,27 +933,14 @@
     // 狀態管理與互動渲染邏輯
     // =========================================================================
     let currentTab = 'day1';
+    const STORAGE_KEY = 'roadtrip_1204_checklist_v2';
     let checkedItems = {};
 
     try {
-      const saved = localStorage.getItem('roadtrip_checklist_1204');
+      const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) checkedItems = JSON.parse(saved);
     } catch (e) {
       checkedItems = {};
-    }
-
-    function saveChecklistState() {
-      try {
-        localStorage.setItem('roadtrip_checklist_1204', JSON.stringify(checkedItems));
-      } catch (e) {
-        // 忽略無痕或沙盒限制
-      }
-    }
-
-    function toggleCheckItem(id) {
-      checkedItems[id] = !checkedItems[id];
-      saveChecklistState();
-      renderChecklist();
     }
 
     function getMapUrl(query) {
@@ -941,41 +949,45 @@
 
     function switchTab(tabId) {
       currentTab = tabId;
-      updateTabButtons();
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const isTarget = btn.getAttribute('data-tab') === tabId;
+        if (isTarget) {
+          btn.className = 'tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-champagne text-obsidian shadow-md shadow-champagne/20';
+        } else {
+          btn.className = 'tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white' + (btn.getAttribute('data-tab') === 'checklist' ? ' ml-auto' : '');
+        }
+      });
+
       if (tabId === 'checklist') {
         renderChecklist();
       } else {
         renderDay(tabId);
       }
-      window.scrollTo({ top: document.querySelector('nav').offsetTop - 5, behavior: 'smooth' });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function updateTabButtons() {
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        const isActive = btn.getAttribute('data-tab') === currentTab;
-        if (isActive) {
-          btn.className = "tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-champagne text-obsidian shadow-lg shadow-champagne/20";
-        } else {
-          btn.className = "tab-btn shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/10";
-        }
-      });
+    function toggleCheckItem(itemId) {
+      checkedItems[itemId] = !checkedItems[itemId];
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedItems));
+      } catch (e) {}
+      renderChecklist();
     }
 
     function renderDay(dayKey) {
       const data = itineraryData[dayKey];
       const container = document.getElementById('app-content');
 
-      let alertStyle = "bg-cobalt/10 border-cobalt/30 text-sky-200";
-      let alertIcon = "💡";
-      if (data.alertBanner.type === "gold") {
-        alertStyle = "bg-champagne/10 border-champagne/30 text-amber-100";
-        alertIcon = "✨";
-      } else if (data.alertBanner.type === "warning") {
-        alertStyle = "bg-amber-500/15 border-amber-500/40 text-amber-100";
-        alertIcon = "⚠️";
-      } else if (data.alertBanner.type === "danger") {
-        alertStyle = "bg-rose-500/15 border-rose-500/40 text-rose-100";
-        alertIcon = "🚨";
+      let alertStyle = 'bg-cobalt/10 border-cobalt/30 text-sky-200';
+      let alertIcon = 'ℹ️';
+      if (data.alertBanner.type === 'gold') {
+        alertStyle = 'bg-champagne/10 border-champagne/30 text-amber-100';
+        alertIcon = '✨';
+      } else if (data.alertBanner.type === 'warning') {
+        alertStyle = 'bg-rose-500/10 border-rose-500/30 text-rose-200';
+        alertIcon = '⚠️';
       }
 
       const statsHtml = data.stats.map(stat => `
@@ -984,6 +996,50 @@
           <div class="text-sm sm:text-base font-bold text-white mt-1">${stat.value}</div>
         </div>
       `).join('');
+
+      const acc = data.accommodation;
+      let accBadgeClass = "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+      let accIcon = "🏨";
+      if (acc.status === "pending") {
+        accBadgeClass = "bg-amber-500/20 text-amber-300 border border-amber-500/40";
+        accIcon = "🔍";
+      } else if (acc.status === "checkout") {
+        accBadgeClass = "bg-cobalt/20 text-cobalt border border-cobalt/40";
+        accIcon = "🛎️";
+      }
+
+      const accommodationHtml = `
+        <div class="glass-panel gold-gradient-border rounded-2xl p-4 sm:p-5 mb-6">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                <span class="text-xs font-bold tracking-wider uppercase text-champagne">${accIcon} 每日住宿安排</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold ${accBadgeClass}">
+                  ${acc.statusLabel}
+                </span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-black text-white">${acc.name}</h3>
+              <p class="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                <span>📍</span>
+                <span>${acc.address}</span>
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="${getMapUrl(acc.mapQuery)}" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white/10 hover:bg-champagne hover:text-obsidian text-white border border-white/15 transition">
+                <span>${acc.status === 'pending' ? '🔍 搜尋高雄住宿地圖' : '📍 導航至旅宿'}</span>
+              </a>
+              <a href="${acc.igUrl}" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold bg-pink-500/15 hover:bg-pink-500/30 text-pink-300 border border-pink-500/30 transition">
+                <span>📷 ${acc.igTag} ↗</span>
+              </a>
+            </div>
+          </div>
+          <p class="mt-3 pt-3 border-t border-white/10 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            ${acc.description}
+          </p>
+        </div>
+      `;
 
       const timelineHtml = data.timeline.map((item, idx) => `
         <div class="relative pl-6 sm:pl-8 pb-8 last:pb-0 group">
@@ -1103,7 +1159,6 @@
 
       container.innerHTML = `
         <section class="animate-fadeIn">
-          <!-- 當日標題與核心統計（已移除跑車路況評級，改為三欄精準統計） -->
           <div class="mb-6">
             <div class="text-xs font-bold tracking-widest uppercase text-champagne mb-1">${data.dayLabel}</div>
             <h2 class="text-xl sm:text-3xl font-black text-white leading-snug">${data.title}</h2>
@@ -1113,6 +1168,9 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
             ${statsHtml}
           </div>
+
+          <!-- 每日住宿安排專屬卡片 -->
+          ${accommodationHtml}
 
           <!-- 當日重要提醒橫幅 -->
           <div class="p-4 rounded-2xl border ${alertStyle} mb-8">
@@ -1160,7 +1218,7 @@
             ` : '<div></div>'}
 
             <button onclick="switchTab('${nextDay}')" class="px-5 py-3 rounded-xl bg-champagne text-obsidian hover:bg-amber-300 text-xs sm:text-sm font-bold shadow-lg shadow-champagne/20 transition">
-              ${nextDay === 'checklist' ? '前往行前裝備檢查清單 →' : '查看下一天行程 →'}
+              ${nextDay === 'checklist' ? '前往行前裝備與住宿總覽 →' : '查看下一天行程 →'}
             </button>
           </div>
         </section>
@@ -1170,7 +1228,6 @@
     function renderChecklist() {
       const container = document.getElementById('app-content');
 
-      // 計算完成進度
       let totalItems = 0;
       let completedCount = 0;
       checklistCategories.forEach(cat => {
@@ -1209,8 +1266,62 @@
         <section>
           <div class="mb-6">
             <div class="text-xs font-bold tracking-widest uppercase text-champagne mb-1">PRE-TRIP CHECKLIST & SUMMARY</div>
-            <h2 class="text-xl sm:text-3xl font-black text-white">行前互動式裝備檢查清單</h2>
-            <p class="mt-2 text-sm text-slate-400">出發前逐項點擊確認（自動儲存勾選狀態於瀏覽器中），確保愛車、縮時器材與栗松溫泉裝備萬無一失。</p>
+            <h2 class="text-xl sm:text-3xl font-black text-white">四晚住宿總覽 ＆ 行前互動式裝備清單</h2>
+            <p class="mt-2 text-sm text-slate-400">一覽四晚住宿預訂進度，並在出發前逐項點擊確認裝備（自動儲存勾選狀態於瀏覽器中）。</p>
+          </div>
+
+          <!-- 四晚住宿總覽卡片 -->
+          <div class="glass-panel gold-gradient-border rounded-2xl p-5 sm:p-6 mb-6">
+            <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2 mb-4">
+              <span class="w-1.5 h-5 rounded-full bg-champagne"></span>
+              <span>🏨 四晚住宿總覽（12/4 – 12/7）</span>
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-4 rounded-xl bg-obsidian/70 border border-emerald-500/30 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="text-xs font-bold text-champagne">Night 2 · 12/5（六）屏東市</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">已確認預訂</span>
+                  </div>
+                  <div class="text-base font-bold text-white">Hello inn 哈囉行旅屏東館</div>
+                  <div class="text-xs text-slate-400 mt-1">900屏東縣屏東市瑞光里瑞民路6號1樓</div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between">
+                  <a href="${getMapUrl('Hello inn 哈囉行旅屏東館 屏東縣屏東市瑞民路6號')}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-champagne hover:underline">📍 Google Maps 導航 ➔</a>
+                  <button onclick="switchTab('day2')" class="text-xs text-slate-400 hover:text-white">查看 Day 2</button>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-obsidian/70 border border-emerald-500/30 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="text-xs font-bold text-champagne">Night 3 · 12/6（日）台東池上</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">已確認預訂</span>
+                  </div>
+                  <div class="text-base font-bold text-white">禮物盒子民宿（禮物盒子青年旅館）</div>
+                  <div class="text-xs text-slate-400 mt-1">958臺東縣池上鄉福原村忠孝路89號</div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between">
+                  <a href="${getMapUrl('禮物盒子民宿 台東縣池上鄉忠孝路89號')}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-champagne hover:underline">📍 Google Maps 導航 ➔</a>
+                  <button onclick="switchTab('day3')" class="text-xs text-slate-400 hover:text-white">查看 Day 3</button>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-obsidian/70 border border-emerald-500/30 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="text-xs font-bold text-champagne">Night 4 · 12/7（一）花蓮七星潭</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">已確認預訂</span>
+                  </div>
+                  <div class="text-base font-bold text-white">七星潭渡假飯店</div>
+                  <div class="text-xs text-slate-400 mt-1">971花蓮縣新城鄉大漢村明潭街10號</div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between">
+                  <a href="${getMapUrl('七星潭渡假飯店 花蓮縣新城鄉明潭街10號')}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-champagne hover:underline">📍 Google Maps 導航 ➔</a>
+                  <button onclick="switchTab('day4')" class="text-xs text-slate-400 hover:text-white">查看 Day 4</button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 準備進度條 -->
